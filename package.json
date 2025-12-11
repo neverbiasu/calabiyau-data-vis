@@ -1,0 +1,31 @@
+{
+  "name": "calabiyau-data-vis",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.11.3",
+    "axios": "^1.13.2",
+    "cheerio": "^1.1.2",
+    "nuxt": "^4.2.2",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/d3": "^7.4.3",
+    "autoprefixer": "^10.4.22",
+    "d3": "^7.9.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.96.0",
+    "tailwindcss": "^4.1.18",
+    "tsx": "^4.21.0"
+  }
+}
