@@ -145,6 +145,17 @@ function updateChart() {
   // Labels
   svg.selectAll('.axis-label').remove();
   
+  // Debug Data
+  console.log('ScatterPlot Update:', { 
+      weaponsCount: weapons.length, 
+      xMin, xMax, yMin, yMax,
+      sample: weapons[0]
+  });
+
+  if (weapons.length && (xMin === xMax || !xMin)) {
+      console.warn('Invalid scales detected');
+  }
+
   // X Label
   svg.append('text')
     .attr('class', 'axis-label')

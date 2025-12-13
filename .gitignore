@@ -6,3 +6,10 @@ node_modules
 dist
 .DS_Store
 *.log
+docs
+
+# Scrape artifacts
+character_*.html
+weapon_*.html
+assets/raw_data/
+coverage/

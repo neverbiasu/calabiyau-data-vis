@@ -9,23 +9,23 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {
       colors: {
-        'bg-core': '#08090D',
-        'bg-panel': '#12141C',
-        'primary': '#00F0FF',
-        'secondary': '#FF0055',
-        'accent': '#FFE600',
-        'text-main': '#EAEAEA',
-        'text-muted': '#6B7280',
-        'border-color': '#2A2F3E', // 'border' is a reserved keyword in some contexts, using border-color or just border-custom
+        'bg-core': '#FDF6F8', // 极浅粉白
+        'bg-panel': '#FFFFFF', // 纯白
+        'primary': '#FF9FCD', // 主色粉
+        'secondary': '#A0E9FF', // 辅色蓝
+        'accent': '#FFF59D', // 点缀黄
+        'text-main': '#4A4A4A', // 深灰
+        'text-muted': '#9B9B9B', // 浅灰
+        'border-color': '#F0E6EA', // 浅粉灰
       },
       fontFamily: {
-        rajdhani: ['Rajdhani', 'sans-serif'],
-        orbitron: ['Orbitron', 'sans-serif'],
+        base: ['Noto Sans JP', 'sans-serif'],
+        display: ['Orbitron', 'sans-serif'], // 保留一点科技感用于数字/Logo
+        rounded: ['Varela Round', 'sans-serif'],
       },
       borderColor: {
-        DEFAULT: '#2A2F3E',
+        DEFAULT: '#F0E6EA',
       }
     },
   },
