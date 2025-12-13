@@ -1,11 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Varela+Round&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+    /* Colors */
+    --color-primary: #ee2b5b;
+    --color-primary-soft: #ffeaef;
+    --color-primary-hover: #d61f4d;
+    --color-secondary: #A0E9FF;
 
-body {
-    background-color: #FDF6F8;
-    color: #4A4A4A;
-    font-family: 'Noto Sans JP', sans-serif;
+    --color-background-light: #fff5f7;
+    --color-background-dark: #221015;
+
+    --color-text-dark: #1b0d11;
+    --color-text-light: #fcf8f9;
+    --color-text-main: #1b0d11;
+    --color-text-secondary: #9a4c5f;
+    --color-text-muted: #9B9B9B;
+
+    --color-card-light: rgba(255, 255, 255, 0.7);
+    --color-card-dark: rgba(34, 16, 21, 0.7);
+    --color-card-bg: #ffffff;
+    --color-surface-light: #ffffff;
+
+    --color-faction-scissors: #ffeef2;
+
+    /* Fonts */
+    --font-display: "Spline Sans", "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    --font-body: "Noto Sans", sans-serif;
+    --font-jp: "Noto Sans JP", sans-serif;
+
+    /* Border Radius */
+    --radius-xl: 2rem;
+    --radius-2xl: 2.5rem;
+    --radius-3xl: 3.5rem;
+
+    /* Box Shadows */
+    --shadow-soft: 0 10px 40px -10px rgba(238, 43, 91, 0.15);
+    --shadow-glow: 0 0 20px rgba(238, 43, 91, 0.3);
+    --shadow-kawaii: 0 10px 30px -5px rgba(255, 158, 205, 0.2);
+    --shadow-kawaii-hover: 0 20px 40px -5px rgba(255, 158, 205, 0.3);
+    --shadow-inner-soft: inset 0 2px 4px 0 rgba(255, 255, 255, 0.5);
+    --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(243, 231, 234, 0.8);
+}
+
+@layer base {
+    body {
+        @apply bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light font-display antialiased selection:bg-primary selection:text-white;
+    }
+}
+
+@layer utilities {
+    .glass-panel {
+        @apply backdrop-blur-xl border border-white/50 dark:border-white/10;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }

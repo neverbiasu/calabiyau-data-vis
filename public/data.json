@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-11T23:31:29.986Z",
+  "last_updated": "2025-12-13T14:57:41.841Z",
   "game_version": "1.0",
   "weapons": [
     {
@@ -12,7 +12,7 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/c/c7/3c7tneeq5bw61nxbtrlcvvr391e81ra.png"
       },
       "stats": {
-        "damage_body": 24,
+        "damage_body": 25,
         "damage_head": 37,
         "fire_rate": 695,
         "mag_capacity": 30,
@@ -34,8 +34,7 @@
         "dps_head": 429,
         "burst_damage": 750,
         "time_to_kill": 0.604
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E8%AD%A6%E6%8E%A2"
+      }
     },
     {
       "id": "phantom_frost",
@@ -69,8 +68,7 @@
         "dps_head": 369,
         "burst_damage": 736,
         "time_to_kill": 0.608
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%B9%BB%E9%9C%9C"
+      }
     },
     {
       "id": "solo_dance",
@@ -82,10 +80,10 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/8/8d/fhxz6xwsdiq7qx67x830sfmeb5edvfs.png"
       },
       "stats": {
-        "damage_body": 21,
+        "damage_body": 23,
         "damage_head": 28,
         "fire_rate": 870,
-        "mag_capacity": 26,
+        "mag_capacity": 25,
         "reload_time": 2,
         "range": 50
       },
@@ -104,8 +102,7 @@
         "dps_head": 406,
         "burst_damage": 575,
         "time_to_kill": 0.552
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%8B%AC%E8%88%9E"
+      }
     },
     {
       "id": "backfire",
@@ -117,9 +114,9 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/3/3f/peuv3c0rd8ntdrv280ro4u9hucw4ton.png"
       },
       "stats": {
-        "damage_body": 27,
+        "damage_body": 30,
         "damage_head": 45,
-        "fire_rate": 600,
+        "fire_rate": 595,
         "mag_capacity": 25,
         "reload_time": 2,
         "range": 50
@@ -139,8 +136,7 @@
         "dps_head": 446,
         "burst_damage": 750,
         "time_to_kill": 0.605
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E9%80%86%E7%84%B0"
+      }
     },
     {
       "id": "falcon",
@@ -154,10 +150,10 @@
       "stats": {
         "damage_body": 24,
         "damage_head": 36,
-        "fire_rate": 680,
-        "mag_capacity": 3,
+        "fire_rate": 690,
+        "mag_capacity": 30,
         "reload_time": 2,
-        "range": 500
+        "range": 50
       },
       "attributes": {
         "aim_speed": 45,
@@ -174,8 +170,7 @@
         "dps_head": 414,
         "burst_damage": 720,
         "time_to_kill": 0.696
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E9%9A%BC"
+      }
     },
     {
       "id": "shadow_raid",
@@ -187,7 +182,7 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/d/d5/msr7u40gsvmci021ixtagltyaoidbyl.png"
       },
       "stats": {
-        "damage_body": 23,
+        "damage_body": 24,
         "damage_head": 36,
         "fire_rate": 750,
         "mag_capacity": 32,
@@ -209,8 +204,7 @@
         "dps_head": 450,
         "burst_damage": 768,
         "time_to_kill": 0.64
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%BD%B1%E8%A2%AD"
+      }
     },
     {
       "id": "blazing_fire",
@@ -222,10 +216,10 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/3/3c/etv89slytlolbrteposqyko2rshsj17.png"
       },
       "stats": {
-        "damage_body": 5,
+        "damage_body": 42,
         "damage_head": 73,
         "fire_rate": 350,
-        "mag_capacity": 17,
+        "mag_capacity": 15,
         "reload_time": 2,
         "range": 50
       },
@@ -244,8 +238,7 @@
         "dps_head": 426,
         "burst_damage": 630,
         "time_to_kill": 0.686
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E9%B8%A3%E7%81%AB"
+      }
     },
     {
       "id": "polaris",
@@ -279,8 +272,7 @@
         "dps_head": 411,
         "burst_damage": 625,
         "time_to_kill": 0.631
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F"
+      }
     },
     {
       "id": "defender",
@@ -292,7 +284,7 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/7/78/5l8mbeoifaobj5p97tvqic8877j9zr8.png"
       },
       "stats": {
-        "damage_body": 28,
+        "damage_body": 30,
         "damage_head": 45,
         "fire_rate": 575,
         "mag_capacity": 50,
@@ -314,8 +306,7 @@
         "dps_head": 431,
         "burst_damage": 1500,
         "time_to_kill": 0.626
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%8D%AB%E5%86%95"
+      }
     },
     {
       "id": "sharp_fang",
@@ -327,7 +318,7 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/4/4d/npxk9ao32l3n90n9bvg5ldw3q9u7wyt.png"
       },
       "stats": {
-        "damage_body": 26,
+        "damage_body": 28,
         "damage_head": 42,
         "fire_rate": 650,
         "mag_capacity": 25,
@@ -349,8 +340,7 @@
         "dps_head": 455,
         "burst_damage": 700,
         "time_to_kill": 0.646
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B"
+      }
     },
     {
       "id": "inquisitor",
@@ -384,238 +374,6 @@
         "dps_head": 438,
         "burst_damage": 860,
         "time_to_kill": 0.686
-      },
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%AE%A1%E5%88%A4%E5%AE%98"
-    },
-    {
-      "id": "id_e7a9bae5",
-      "name": "空境",
-      "character": "心夏",
-      "type": "狙击枪",
-      "stats": {
-        "damage_body": 100,
-        "damage_head": 0,
-        "fire_rate": 37,
-        "mag_capacity": 7,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%A9%BA%E5%A2%83",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/2/28/jqy5u725jgx63d26cthl7hs7pfcpfag.jpg/1250px-%E7%A9%BA%E5%A2%83%E5%A4%96%E8%A7%82-%E5%A4%A9%E7%A9%B9%E4%B9%8B%E5%BF%83.jpg"
-      }
-    },
-    {
-      "id": "id_e7bb9de5",
-      "name": "绝对执行",
-      "character": "忧雾",
-      "type": "自动步枪",
-      "stats": {
-        "damage_body": 24,
-        "damage_head": 0,
-        "fire_rate": 680,
-        "mag_capacity": 3,
-        "reload_time": 0,
-        "range": 500
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/a/ae/p7czncnxrvgik0ileine7uvviwog0kx.jpg/1250px-%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C%E5%A4%96%E8%A7%82-%E5%A5%88%E8%90%BD%E8%8A%B1%E5%94%B1.jpg"
-      }
-    },
-    {
-      "id": "id_e6a0a1e5",
-      "name": "校准仪",
-      "character": "蕾欧娜",
-      "type": "Unknown",
-      "stats": {
-        "damage_body": 26,
-        "damage_head": 0,
-        "fire_rate": 600,
-        "mag_capacity": 60,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%A0%A1%E5%87%86%E4%BB%AA",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/a/ac/8zgxj9hsg2b59233otpheozs6266yx1.jpg/1250px-%E6%A0%A1%E5%87%86%E4%BB%AA%E5%A4%96%E8%A7%82-%E7%BB%9E%E7%81%AB%E7%82%89%E8%86%9B.jpg"
-      }
-    },
-    {
-      "id": "id_e69eabe9",
-      "name": "枫鸣",
-      "character": "千代",
-      "type": "自动步枪",
-      "stats": {
-        "damage_body": 34,
-        "damage_head": 0,
-        "fire_rate": 600,
-        "mag_capacity": 20,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%9E%AB%E9%B8%A3",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/f/fb/cu8x7tpmaryv9pog1w0lipn4ndooi10.jpg/1250px-%E6%9E%AB%E9%B8%A3%E5%A4%96%E8%A7%82-%E7%A0%81%E5%A4%B4%E9%A4%90%E5%8E%85.jpg"
-      }
-    },
-    {
-      "id": "id_e8b0a2e5",
-      "name": "谢幕曲",
-      "character": "香奈美",
-      "type": "Unknown",
-      "stats": {
-        "damage_body": 105,
-        "damage_head": 0,
-        "fire_rate": 25,
-        "mag_capacity": 6,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E8%B0%A2%E5%B9%95%E6%9B%B2",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/c/c4/np7fxu9lgand735gndudspjnxc2fg05.jpg/1250px-%E8%B0%A2%E5%B9%95%E6%9B%B2%E5%A4%96%E8%A7%82-%E7%81%B5%E9%AD%82%E9%B8%A3%E5%93%8D.jpg"
-      }
-    },
-    {
-      "id": "id_e7a0b4e6",
-      "name": "破晓",
-      "character": "令",
-      "type": "Unknown",
-      "stats": {
-        "damage_body": 76,
-        "damage_head": 0,
-        "fire_rate": 200,
-        "mag_capacity": 10,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%A0%B4%E6%99%93",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/3/3b/8n2ywphbudb7wp3ie3z7b1aj4hij2kp.jpg/1250px-%E7%A0%B4%E6%99%93%E5%A4%96%E8%A7%82-%E4%B8%89%E5%8F%89%E6%88%9F.jpg"
-      }
-    },
-    {
-      "id": "id_e7bbbde6",
-      "name": "绽放",
-      "character": "珐格兰丝",
-      "type": "自动步枪",
-      "stats": {
-        "damage_body": 22,
-        "damage_head": 0,
-        "fire_rate": 730,
-        "mag_capacity": 30,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%BB%BD%E6%94%BE",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/a/a2/ndu73fgvvped7rjqcm06xt52ye4qspp.jpg/1250px-%E7%BB%BD%E6%94%BE%E5%A4%96%E8%A7%82-%E5%B9%BD%E8%8D%86%E6%98%99%E6%A2%A6.jpg"
-      }
-    },
-    {
-      "id": "id_e5a49ce9",
-      "name": "夜镰",
-      "character": "玛拉",
-      "type": "Unknown",
-      "stats": {
-        "damage_body": 24,
-        "damage_head": 0,
-        "fire_rate": 740,
-        "mag_capacity": 30,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%A4%9C%E9%95%B0",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/4/44/dnuw5jom450c2dzt68yl2z82g7c96qr.jpg/1250px-%E5%A4%9C%E9%95%B0%E5%A4%96%E8%A7%82-%E6%9A%97%E5%A4%9C%E7%AA%A5%E8%A7%86.jpg"
-      }
-    },
-    {
-      "id": "id_e887aae7",
-      "name": "自由意志",
-      "character": "白墨",
-      "type": "Unknown",
-      "stats": {
-        "damage_body": 7,
-        "damage_head": 0,
-        "fire_rate": 225,
-        "mag_capacity": 10,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/0/0e/agtcogax9lyo75ht51ldhud3z7c9b9q.jpg/1250px-%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97%E5%A4%96%E8%A7%82-%E7%9B%9B%E4%B8%96%E5%BC%BA%E9%9F%B3.jpg"
-      }
-    },
-    {
-      "id": "id_e5bda9e7",
-      "name": "彩绘",
-      "character": "玛德蕾娜",
-      "type": "Unknown",
-      "stats": {
-        "damage_body": 51,
-        "damage_head": 0,
-        "fire_rate": 300,
-        "mag_capacity": 15,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%BD%A9%E7%BB%98",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/8/8c/gbt9rrl43pgjtyb4zhahn6uz2wzdcxs.jpg/1250px-%E5%BD%A9%E7%BB%98%E5%A4%96%E8%A7%82-%E5%B7%A5%E4%B8%9A%E5%B9%BB%E6%83%B3.jpg"
-      }
-    },
-    {
-      "id": "id_e6acbae8",
-      "name": "欺诈师",
-      "character": "加拉蒂亚",
-      "type": "自动步枪",
-      "stats": {
-        "damage_body": 25,
-        "damage_head": 0,
-        "fire_rate": 700,
-        "mag_capacity": 26,
-        "reload_time": 0,
-        "range": 0
-      },
-      "attributes": {},
-      "computed": {},
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%AC%BA%E8%AF%88%E5%B8%88",
-      "imgs": {
-        "character": "",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/thumb/c/c3/iic08dkfrxwmo10pf9m5s84zmdytrbi.jpg/500px-AKM_automatkarbin.jpg"
       }
     }
   ],
@@ -624,139 +382,188 @@
       "id": "michelle",
       "name": "米雪儿李",
       "icon": "https://patchwiki.biligame.com/images/klbq/1/1b/tgwx7q9203dafj6rsypza3flbultqf7.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%B1%B3%E9%9B%AA%E5%84%BF"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/1/1b/tgwx7q9203dafj6rsypza3flbultqf7.png"
+      },
+      "stats": {
+        "hp": 0,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "yvette",
       "name": "伊薇特",
       "icon": "https://patchwiki.biligame.com/images/klbq/4/42/j71nx9i25shxr65jnoxxh24x4y0t0b5.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E4%BC%8A%E8%96%87%E7%89%B9"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/e/eb/95xhhowpgnq6ljbnpjrg4b6gafojjqx.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "flavia",
       "name": "芙拉薇娅",
       "icon": "https://patchwiki.biligame.com/images/klbq/c/c5/8bp7psa0s66d19ceyczzv78b26ydaqp.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E8%8A%99%E6%8B%89%E8%96%87%E5%A8%85"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/5/55/4hx8rglgh67xh31bz8cx8qwzkal9997.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "ming",
       "name": "明",
       "icon": "https://patchwiki.biligame.com/images/klbq/1/11/0nwi3xouneowru6xxvkrb6uq4dy9vdz.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%98%8E"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/5/55/1hmqz3kojmm8w0gm078fiacvno0dg59.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "meredith",
       "name": "梅瑞狄斯",
       "icon": "https://patchwiki.biligame.com/images/klbq/d/dd/20gac3391nb2prx6r69yrdkfatxapdu.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%A2%85%E7%91%9E%E7%8B%84%E6%96%AF"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/b/b5/8kla5bq9p1rf6e7z4b27og3vwge9hww.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "lawine",
       "name": "拉薇",
       "icon": "https://patchwiki.biligame.com/images/klbq/f/f3/1zor7pqxy3rn3uggyenorigvf37q4hr.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%8B%89%E8%96%87"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/d/d1/f8gaky90dj1x8v033oj3lckj8m0iupc.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "eika",
       "name": "艾卡",
       "icon": "https://patchwiki.biligame.com/images/klbq/9/92/oai6e3g5fqekd9023ikl9kvdk0mguy6.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E8%89%BE%E5%8D%A1"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/b/b5/rnd6snpj3nc8uectdyp7b2witm80h2q.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "celestia",
       "name": "星绘",
       "icon": "https://patchwiki.biligame.com/images/klbq/f/f2/9rwg399wannhzh80knjj5tmwffnjg0m.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E6%98%9F%E7%BB%98"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/0/04/jopjj6kjva8b46fwmmk2uju8e0odnxh.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "audrey",
       "name": "奥黛丽",
       "icon": "https://patchwiki.biligame.com/images/klbq/2/2d/hmkcsrcvp79ctofkwv92iint9iupvnk.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%A5%A5%E9%BB%9B%E4%B8%BD%C2%B7%E6%A0%BC%E7%BD%97%E5%A4%AB"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/9/97/es01spueuf0ad4hwr0drbefn2ugrswd.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "fuchsia",
       "name": "绯莎",
       "icon": "https://patchwiki.biligame.com/images/klbq/f/f4/rtraite3bno62mzfatae961ke36hc5b.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%BB%AF%E8%8E%8E"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/4/4a/1zz9eug0fhmajbmtiwx7gx3d30nbato.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "nobunaga",
       "name": "信",
       "icon": "https://patchwiki.biligame.com/images/klbq/e/e6/s4r4y425r5vn5fbq0sw4i1d7l8d6ft4.png",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E4%BF%A1"
-    },
-    {
-      "id": "id_e7b1b3e9",
-      "name": "米雪儿·李",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%B1%B3%E9%9B%AA%E5%84%BF%C2%B7%E6%9D%8E"
-    },
-    {
-      "id": "id_e5bf83e5",
-      "name": "心夏",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%BF%83%E5%A4%8F"
-    },
-    {
-      "id": "id_e5bfa7e9",
-      "name": "忧雾",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%BF%A7%E9%9B%BE"
-    },
-    {
-      "id": "id_e895bee6",
-      "name": "蕾欧娜",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E8%95%BE%E6%AC%A7%E5%A8%9C"
-    },
-    {
-      "id": "id_e58d83e4",
-      "name": "千代",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%8D%83%E4%BB%A3"
-    },
-    {
-      "id": "id_e9a699e5",
-      "name": "香奈美",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E9%A6%99%E5%A5%88%E7%BE%8E"
-    },
-    {
-      "id": "id_e4bba4",
-      "name": "令",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E4%BB%A4"
-    },
-    {
-      "id": "id_e78f90e6",
-      "name": "珐格兰丝",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%8F%90%E6%A0%BC%E5%85%B0%E4%B8%9D"
-    },
-    {
-      "id": "id_e78e9be6",
-      "name": "玛拉",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%8E%9B%E6%8B%89"
-    },
-    {
-      "id": "id_e799bde5",
-      "name": "白墨",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%99%BD%E5%A2%A8"
-    },
-    {
-      "id": "id_e78e9be5",
-      "name": "玛德蕾娜",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E7%8E%9B%E5%BE%B7%E8%95%BE%E5%A8%9C%C2%B7%E5%88%A9%E9%87%8C"
-    },
-    {
-      "id": "id_e58aa0e6",
-      "name": "加拉蒂亚",
-      "icon": "",
-      "wikiUrl": "https://wiki.biligame.com/klbq/%E5%8A%A0%E6%8B%89%E8%92%82%E4%BA%9A%C2%B7%E5%88%A9%E9%87%8C"
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/c/ce/hzne4xefot7hen6mqjhpi05s1kl1t4e.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Unknown",
+      "faction": "Unknown"
     }
   ]
 }

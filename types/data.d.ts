@@ -38,11 +38,36 @@ export interface Weapon {
     burst_damage: number;
     time_to_kill: number; // Against standard target
   };
+  
+  wikiUrl?: string; // Optional: Link to wiki
+}
+
+export interface Ability {
+  name: string;
+  type: 'Passive' | 'Active' | 'Ultimate' | 'Weapon';
+  description: string;
+  stats?: Record<string, string>; // e.g. { "Cooldown": "15s", "Cost": "120" }
+  image?: string;
 }
 
 export interface Character {
   id: string;
   name: string;
+  icon: string;
+  wikiUrl?: string;
+  faction?: string;
+  role?: string;
+  bio?: string;
+  images?: {
+    full?: string;
+    portrait?: string;
+  };
+  stats?: {
+    hp: number;
+    armor: number;
+    mobility: number;
+  };
+  abilities?: Ability[];
 }
 
 export interface RootData {
