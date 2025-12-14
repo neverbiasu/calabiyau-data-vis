@@ -428,9 +428,6 @@ async function main() {
 
     // 1. Process Weapons & Link to Characters
     // Union of keys from both sources to ensure we capture all weapons
-    // Debug Selection Map Keys
-    console.log('Selection Map Keys:', Array.from(selectionMap.keys()));
-
     const allCharIds = new Set([...Object.keys(theoryData), ...Object.keys(filterData)]);
 
     for (const charId of allCharIds) {
