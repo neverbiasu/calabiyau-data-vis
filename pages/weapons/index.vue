@@ -37,7 +37,7 @@ const filteredWeapons = computed(() => {
         <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
           <span class="material-symbols-outlined text-xl">data_exploration</span>
         </div>
-        <h2 class="text-text-dark dark:text-white text-lg font-bold tracking-tight">Strinova <span class="text-primary">CC</span></h2>
+        <h2 class="text-text-dark dark:text-white text-lg font-bold tracking-tight">Calabiyau <span class="text-primary">Data Vis</span></h2>
       </div>
       <nav class="hidden md:flex items-center gap-8 mx-auto">
         <NuxtLink class="text-text-dark dark:text-white/80 text-sm font-medium hover:text-primary transition-colors" to="/">Home</NuxtLink>
@@ -145,28 +145,19 @@ const filteredWeapons = computed(() => {
         </div>
       </NuxtLink>
 
-      <!-- Suggest Card -->
-       <div class="glass-panel border-dashed border-2 bg-transparent rounded-3xl p-6 flex flex-col items-center justify-center gap-4 text-center cursor-pointer hover:bg-white/20 transition-colors h-full min-h-[300px]">
-            <div class="size-16 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm">
-                 <span class="material-symbols-outlined text-3xl text-gray-400">add</span>
-            </div>
-            <div>
-                 <h3 class="text-lg font-bold text-gray-900 dark:text-white">Suggest a Weapon</h3>
-                 <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Missing something? Let us know what to add to the armory.</p>
-            </div>
-       </div>
+
 
     </div>
   </main>
   
   <footer class="w-full flex flex-col items-center py-12 text-center relative z-10 border-t border-white/20">
-    <div class="mb-4 text-2xl font-bold tracking-tight text-text-dark dark:text-white">Strinova <span class="text-primary">CC</span>. Community Project.</div>
+    <div class="mb-4 text-2xl font-bold tracking-tight text-text-dark dark:text-white">Calabiyau <span class="text-primary">Data Vis</span></div>
     <div class="flex gap-6 mb-8 text-sm font-medium text-gray-500 dark:text-gray-400">
       <a class="hover:text-primary transition-colors" href="#">Privacy</a>
       <a class="hover:text-primary transition-colors" href="#">Terms</a>
-      <a class="hover:text-primary transition-colors" href="#">API</a>
+      <a class="hover:text-primary transition-colors" href="#">Contact</a>
     </div>
-    <p class="text-gray-400 text-xs font-medium max-w-md px-6">© 2023 Strinova Command Center. Community Project.</p>
+    <p class="text-gray-400 text-xs font-medium max-w-md px-6">© 2025 Calabiyau Data Vis. Community Project.</p>
   </footer>
 </div>
 </template>

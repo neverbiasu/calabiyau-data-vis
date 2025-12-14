@@ -2,11 +2,11 @@
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-text-dark antialiased selection:bg-primary selection:text-white">
   <header class="sticky top-0 z-50 flex w-full items-center justify-between border-b border-[#f4e6ed] bg-[#fcf8fa]/90 backdrop-blur-md px-6 py-4 lg:px-10">
     <div class="flex items-center gap-8">
-      <div class="flex items-center gap-3 text-text-dark">
-        <div class="flex size-10 items-center justify-center rounded-xl bg-primary/20 text-primary">
-          <span class="material-symbols-outlined text-3xl">token</span>
+      <div class="flex items-center gap-3">
+        <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
+          <span class="material-symbols-outlined text-xl">data_exploration</span>
         </div>
-        <h2 class="text-xl font-bold leading-tight tracking-tight">Strinova <span class="text-primary">Data</span></h2>
+        <h2 class="text-xl font-bold leading-tight tracking-tight">Calabiyau <span class="text-primary">Data</span></h2>
       </div>
       <nav class="hidden items-center gap-6 md:flex">
         <NuxtLink class="text-sm font-medium text-text-dark hover:text-primary transition-colors" to="/characters">Characters</NuxtLink>

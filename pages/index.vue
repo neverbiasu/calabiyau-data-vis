@@ -6,7 +6,7 @@
         <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
           <span class="material-symbols-outlined text-xl">data_exploration</span>
         </div>
-        <h2 class="text-text-dark dark:text-white text-lg font-bold tracking-tight">Strinova <span class="text-primary">CC</span></h2>
+        <h2 class="text-text-dark dark:text-white text-lg font-bold tracking-tight">Calabiyau <span class="text-primary">Data Vis</span></h2>
       </div>
       <nav class="hidden md:flex items-center gap-8 mx-auto">
         <NuxtLink class="text-text-dark dark:text-white/80 text-sm font-medium hover:text-primary transition-colors" to="/">Home</NuxtLink>
@@ -74,7 +74,7 @@
           </div>
           <div class="space-y-2">
             <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-text-dark dark:text-white drop-shadow-sm">
-                            Strinova <br class="md:hidden"/>Command Center
+                            Calabiyau <br class="md:hidden"/>Data Vis
                         </h1>
             <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium">
                             Analyze. Strategize. <span class="text-primary font-bold">UwU.</span>
@@ -299,13 +299,13 @@
     </section>
   </main>
   <footer class="w-full flex flex-col items-center py-12 text-center relative z-10 border-t border-white/20">
-    <div class="mb-4 text-2xl font-bold tracking-tight text-text-dark dark:text-white">Strinova <span class="text-primary">CC</span></div>
+    <div class="mb-4 text-2xl font-bold tracking-tight text-text-dark dark:text-white">Calabiyau <span class="text-primary">Data Vis</span></div>
     <div class="flex gap-6 mb-8 text-sm font-medium text-gray-500 dark:text-gray-400">
       <a class="hover:text-primary transition-colors" href="#">Privacy</a>
       <a class="hover:text-primary transition-colors" href="#">Terms</a>
       <a class="hover:text-primary transition-colors" href="#">Contact</a>
     </div>
-    <p class="text-gray-400 text-xs font-medium max-w-md px-6">© 2023 Strinova Command Center. Data provided for entertainment purposes. Not affiliated with the official game developers.</p>
+    <p class="text-gray-400 text-xs font-medium max-w-md px-6">© 2025 Calabiyau Data Vis. Data provided for entertainment purposes. Not affiliated with the official game developers.</p>
   </footer>
 </div>
 </template>

@@ -1,11 +1,11 @@
 {
-  "last_updated": "2025-12-13T14:57:41.841Z",
+  "last_updated": "2025-12-14T21:03:22.669Z",
   "game_version": "1.0",
   "weapons": [
     {
       "id": "investigator",
       "name": "警探",
-      "character": "米雪儿李",
+      "character": "米雪儿",
       "type": "自动步枪",
       "imgs": {
         "character": "https://patchwiki.biligame.com/images/klbq/1/1b/tgwx7q9203dafj6rsypza3flbultqf7.png",
@@ -71,37 +71,37 @@
       }
     },
     {
-      "id": "solo_dance",
-      "name": "独舞",
-      "character": "芙拉薇娅",
-      "type": "微型冲锋枪",
+      "id": "shadow_raid",
+      "name": "影袭",
+      "character": "拉薇",
+      "type": "自动步枪",
       "imgs": {
-        "character": "https://patchwiki.biligame.com/images/klbq/c/c5/8bp7psa0s66d19ceyczzv78b26ydaqp.png",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/8/8d/fhxz6xwsdiq7qx67x830sfmeb5edvfs.png"
+        "character": "https://patchwiki.biligame.com/images/klbq/f/f3/1zor7pqxy3rn3uggyenorigvf37q4hr.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/d/d5/msr7u40gsvmci021ixtagltyaoidbyl.png"
       },
       "stats": {
-        "damage_body": 23,
-        "damage_head": 28,
-        "fire_rate": 870,
-        "mag_capacity": 25,
+        "damage_body": 24,
+        "damage_head": 36,
+        "fire_rate": 750,
+        "mag_capacity": 32,
         "reload_time": 2,
         "range": 50
       },
       "attributes": {
-        "aim_speed": 56,
-        "accuracy": 72,
-        "handling": 70,
+        "aim_speed": 50,
+        "accuracy": 71,
+        "handling": 57,
         "reload_speed": 24,
         "charge_speed": 0,
         "fire_mode": "全自动",
         "zoom_scale": "1.25X",
-        "move_speed": 58
+        "move_speed": 55
       },
       "computed": {
-        "dps_body": 334,
-        "dps_head": 406,
-        "burst_damage": 575,
-        "time_to_kill": 0.552
+        "dps_body": 300,
+        "dps_head": 450,
+        "burst_damage": 768,
+        "time_to_kill": 0.64
       }
     },
     {
@@ -170,40 +170,6 @@
         "dps_head": 414,
         "burst_damage": 720,
         "time_to_kill": 0.696
-      }
-    },
-    {
-      "id": "shadow_raid",
-      "name": "影袭",
-      "character": "拉薇",
-      "type": "自动步枪",
-      "imgs": {
-        "character": "https://patchwiki.biligame.com/images/klbq/f/f3/1zor7pqxy3rn3uggyenorigvf37q4hr.png",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/d/d5/msr7u40gsvmci021ixtagltyaoidbyl.png"
-      },
-      "stats": {
-        "damage_body": 24,
-        "damage_head": 36,
-        "fire_rate": 750,
-        "mag_capacity": 32,
-        "reload_time": 2,
-        "range": 50
-      },
-      "attributes": {
-        "aim_speed": 50,
-        "accuracy": 71,
-        "handling": 57,
-        "reload_speed": 24,
-        "charge_speed": 0,
-        "fire_mode": "全自动",
-        "zoom_scale": "1.25X",
-        "move_speed": 55
-      },
-      "computed": {
-        "dps_body": 300,
-        "dps_head": 450,
-        "burst_damage": 768,
-        "time_to_kill": 0.64
       }
     },
     {
@@ -375,25 +341,399 @@
         "burst_damage": 860,
         "time_to_kill": 0.686
       }
+    },
+    {
+      "id": "night_scythe",
+      "name": "夜镰",
+      "character": "玛拉",
+      "type": "微型冲锋枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/e/e7/c7msn3m8l7mkj4fyc8wjjn1r127qik5.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/e/e5/3wp84rekdwbj4ft7ydex992s4jbctbz.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 56,
+        "accuracy": 70,
+        "handling": 68,
+        "reload_speed": 24,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 58
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "curtain_call",
+      "name": "谢幕曲",
+      "character": "香奈美",
+      "type": "狙击步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/1/1d/ffln5mqrwtvr0dj0wq54guvs10jsfdo.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/a/a2/o1thpxu601uvs746nmbk6lpdq80spix.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 42,
+        "accuracy": 15,
+        "handling": 60,
+        "reload_speed": 10,
+        "charge_speed": 48,
+        "fire_mode": "手动",
+        "zoom_scale": "1.5X、2.5X、4.0X",
+        "move_speed": 53
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "ethereal",
+      "name": "空境",
+      "character": "心夏",
+      "type": "狙击步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/4/44/jvg14awbm8ip4fmf4nlkdr7f9nd88xs.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/b/b6/kt2uw0kum0greajga4ieydxrzde7n78.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 46,
+        "accuracy": 15,
+        "handling": 60,
+        "reload_speed": 12,
+        "charge_speed": 54,
+        "fire_mode": "手动",
+        "zoom_scale": "1.5X、2.5X、4.0X",
+        "move_speed": 53
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "painted",
+      "name": "彩绘",
+      "character": "玛德蕾娜",
+      "type": "精确射手步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/d/d6/hfq5r7kv7blidsu49fieu0b3wqbpjwu.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/b/b8/a63ig3i84vbf9uq44eifbql2i5rqtm2.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 42,
+        "accuracy": 15,
+        "handling": 58,
+        "reload_speed": 21,
+        "charge_speed": 0,
+        "fire_mode": "半自动",
+        "zoom_scale": "1.5X、2.5X",
+        "move_speed": 54
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "maple_hum",
+      "name": "枫鸣",
+      "character": "千代",
+      "type": "精确射手步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/5/52/5pq193hf9ubxdjwq529tplc86vmnfzk.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/6/6a/48ex25ezy96glcmrs260l9rxhx9omg8.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 42,
+        "accuracy": 64,
+        "handling": 65,
+        "reload_speed": 21,
+        "charge_speed": 0,
+        "fire_mode": "全自动、半自动",
+        "zoom_scale": "1.5X",
+        "move_speed": 53
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "dawn",
+      "name": "破晓",
+      "character": "令",
+      "type": "精确射手步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/1/14/03q3m3te4km950ageyq18tqc2erds2o.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/e/ee/sxgz0hjjeqhtfhomgx93q0x8mkh3724.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 42,
+        "accuracy": 15,
+        "handling": 60,
+        "reload_speed": 22,
+        "charge_speed": 0,
+        "fire_mode": "半自动",
+        "zoom_scale": "1.5X、2.5X、4.0X",
+        "move_speed": 54
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "bloom",
+      "name": "绽放",
+      "character": "珐格兰丝",
+      "type": "自动步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/2/2a/2cau3x7z99x3butkxp7wu3w78zjk3go.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/a/a9/inuzlfg3wt2jqjsjzndqgx091bvsvu2.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 45,
+        "accuracy": 73,
+        "handling": 72,
+        "reload_speed": 24,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 55
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "absolute_execution",
+      "name": "绝对执行",
+      "character": "忧雾",
+      "type": "自动步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/7/7e/r18lum2gqzm6yoshtggj3u5z8qpsdlo.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/d/d1/exwrld7u9orpwq0fz11wxpnqbx4nogj.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 54,
+        "accuracy": 60,
+        "handling": 62,
+        "reload_speed": 24,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 55
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "trickster",
+      "name": "欺诈师",
+      "character": "加拉蒂亚",
+      "type": "自动步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/8/8f/79h9y6t4xnboft6wx3bf08tlfacph7v.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/5/58/cluf8ei9l1i1acbc27xm2itzgadrp2e.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 45,
+        "accuracy": 65,
+        "handling": 67,
+        "reload_speed": 24,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 55
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "calibrator",
+      "name": "校准仪",
+      "character": "蕾欧娜",
+      "type": "轻机枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/3/38/3ep2g0eq8aaro0imscmrary2jr5n2w2.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/d/d1/aiwt0qlkdsrbg6h4ul8uo77ussinm02.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 45,
+        "accuracy": 60,
+        "handling": 100,
+        "reload_speed": 21,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 53
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
+    },
+    {
+      "id": "free_will",
+      "name": "自由意志",
+      "character": "白墨",
+      "type": "霰弹枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/d/d1/pkh8t87a4gxu2qt52zsn1305od66jmg.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/9/9c/duq3fq19hr6zoso6ojrn0gg1y09r06x.png"
+      },
+      "stats": {
+        "damage_body": 0,
+        "damage_head": 0,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 42,
+        "accuracy": 10,
+        "handling": 59,
+        "reload_speed": 16,
+        "charge_speed": 54,
+        "fire_mode": "半自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 57
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      }
     }
   ],
   "characters": [
     {
       "id": "michelle",
-      "name": "米雪儿李",
+      "name": "米雪儿",
       "icon": "https://patchwiki.biligame.com/images/klbq/1/1b/tgwx7q9203dafj6rsypza3flbultqf7.png",
       "images": {
-        "portrait": "https://patchwiki.biligame.com/images/klbq/1/1b/tgwx7q9203dafj6rsypza3flbultqf7.png"
+        "portrait": "https://patchwiki.biligame.com/images/klbq/b/b9/e9glc6xvnbs2zayhk0etd6hcx7xoa7f.png"
       },
       "stats": {
-        "hp": 0,
+        "hp": 100,
         "armor": 0,
         "mobility": 0
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Guardian",
+      "faction": "Opal"
     },
     {
       "id": "yvette",
@@ -409,15 +749,15 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Controller",
+      "faction": "Opal"
     },
     {
       "id": "flavia",
-      "name": "芙拉薇娅",
-      "icon": "https://patchwiki.biligame.com/images/klbq/c/c5/8bp7psa0s66d19ceyczzv78b26ydaqp.png",
+      "name": "拉薇",
+      "icon": "https://patchwiki.biligame.com/images/klbq/f/f3/1zor7pqxy3rn3uggyenorigvf37q4hr.png",
       "images": {
-        "portrait": "https://patchwiki.biligame.com/images/klbq/5/55/4hx8rglgh67xh31bz8cx8qwzkal9997.png"
+        "portrait": "https://patchwiki.biligame.com/images/klbq/d/d1/f8gaky90dj1x8v033oj3lckj8m0iupc.png"
       },
       "stats": {
         "hp": 100,
@@ -426,8 +766,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Initiator",
+      "faction": "The Scissors"
     },
     {
       "id": "ming",
@@ -443,8 +783,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Duelist",
+      "faction": "The Scissors"
     },
     {
       "id": "meredith",
@@ -460,25 +800,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
-    },
-    {
-      "id": "lawine",
-      "name": "拉薇",
-      "icon": "https://patchwiki.biligame.com/images/klbq/f/f3/1zor7pqxy3rn3uggyenorigvf37q4hr.png",
-      "images": {
-        "portrait": "https://patchwiki.biligame.com/images/klbq/d/d1/f8gaky90dj1x8v033oj3lckj8m0iupc.png"
-      },
-      "stats": {
-        "hp": 100,
-        "armor": 0,
-        "mobility": 0
-      },
-      "abilities": [],
-      "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Controller",
+      "faction": "The Scissors"
     },
     {
       "id": "eika",
@@ -494,8 +817,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Duelist",
+      "faction": "The Scissors"
     },
     {
       "id": "celestia",
@@ -511,8 +834,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Sentinel",
+      "faction": "Urbino"
     },
     {
       "id": "audrey",
@@ -528,8 +851,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Guardian",
+      "faction": "Urbino"
     },
     {
       "id": "fuchsia",
@@ -545,8 +868,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Duelist",
+      "faction": "Urbino"
     },
     {
       "id": "nobunaga",
@@ -562,8 +885,280 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Unknown",
-      "faction": "Unknown"
+      "role": "Guardian",
+      "faction": "Opal"
+    },
+    {
+      "id": "mara",
+      "name": "玛拉",
+      "icon": "https://patchwiki.biligame.com/images/klbq/e/e7/c7msn3m8l7mkj4fyc8wjjn1r127qik5.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/6/69/axnu38pm3b67cnuwnj0q1ronh94ck6b.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Duelist",
+      "faction": "The Scissors"
+    },
+    {
+      "id": "kanami",
+      "name": "香奈美",
+      "icon": "https://patchwiki.biligame.com/images/klbq/1/1d/ffln5mqrwtvr0dj0wq54guvs10jsfdo.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/0/0e/k624mjrr2qmg72bplmoa73o203onshg.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Initiator",
+      "faction": "The Scissors"
+    },
+    {
+      "id": "kokona",
+      "name": "心夏",
+      "icon": "https://patchwiki.biligame.com/images/klbq/4/44/jvg14awbm8ip4fmf4nlkdr7f9nd88xs.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/f/ff/6niym74t13syhh8p30wel5uu25kdm2x.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Sentinel",
+      "faction": "Opal"
+    },
+    {
+      "id": "madalena",
+      "name": "玛德蕾娜",
+      "icon": "https://patchwiki.biligame.com/images/klbq/d/d6/hfq5r7kv7blidsu49fieu0b3wqbpjwu.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/5/59/iz9ao7a8lal90mhhkquf79xwja4t99p.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "在风曳镇地图有几个箱子，并配备有这样的标签",
+      "role": "Controller",
+      "faction": "Urbino"
+    },
+    {
+      "id": "chiyo",
+      "name": "千代",
+      "icon": "https://patchwiki.biligame.com/images/klbq/5/52/5pq193hf9ubxdjwq529tplc86vmnfzk.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/a/a4/7v10dmee1qfs5ke7o7nrdcqsblguz4t.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Duelist",
+      "faction": "Opal"
+    },
+    {
+      "id": "reiichi",
+      "name": "令",
+      "icon": "https://patchwiki.biligame.com/images/klbq/1/14/03q3m3te4km950ageyq18tqc2erds2o.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/2/2a/g8uhidjyirb4jc6tdlu297d5f9hotzr.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Controller",
+      "faction": "The Scissors"
+    },
+    {
+      "id": "fragrans",
+      "name": "珐格兰丝",
+      "icon": "https://patchwiki.biligame.com/images/klbq/2/2a/2cau3x7z99x3butkxp7wu3w78zjk3go.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/5/54/tddyoawbom9olqv44ox1sm5vm9s1vky.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Sentinel",
+      "faction": "The Scissors"
+    },
+    {
+      "id": "yowu",
+      "name": "忧雾",
+      "icon": "https://patchwiki.biligame.com/images/klbq/7/7e/r18lum2gqzm6yoshtggj3u5z8qpsdlo.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/4/49/a8em10uro1ob5q2cbl7fx0h9fafat9k.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Controller",
+      "faction": "Opal"
+    },
+    {
+      "id": "galatea",
+      "name": "加拉蒂亚",
+      "icon": "https://patchwiki.biligame.com/images/klbq/8/8f/79h9y6t4xnboft6wx3bf08tlfacph7v.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/1/1d/pfkl2hjp3it4f8bidjzy50fntrp4unu.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Initiator",
+      "faction": "Urbino"
+    },
+    {
+      "id": "leona",
+      "name": "蕾欧娜",
+      "icon": "https://patchwiki.biligame.com/images/klbq/3/38/3ep2g0eq8aaro0imscmrary2jr5n2w2.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/9/9e/r3cqvyoui3qwtptpel7a0fz85jkh5v8.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Guardian",
+      "faction": "Opal"
+    },
+    {
+      "id": "baimo",
+      "name": "白墨",
+      "icon": "https://patchwiki.biligame.com/images/klbq/d/d1/pkh8t87a4gxu2qt52zsn1305od66jmg.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/0/0e/ouqnhxot75ovmz56fffegkkxze99l05.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Duelist",
+      "faction": "Urbino"
+    },
+    {
+      "id": "explosive_monster",
+      "name": "爆裂魔怪",
+      "icon": "https://patchwiki.biligame.com/images/klbq/9/9e/0w04w87nz8yt2kwgjms9rhj6mbr3umn.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/9/9e/0w04w87nz8yt2kwgjms9rhj6mbr3umn.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Boss",
+      "faction": "Crystal"
+    },
+    {
+      "id": "sickle_monster",
+      "name": "刺镰魔怪",
+      "icon": "https://patchwiki.biligame.com/images/klbq/9/9f/dk34eoeduf182t31fb1hjfzkl8wae2l.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/9/9f/dk34eoeduf182t31fb1hjfzkl8wae2l.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Boss",
+      "faction": "Crystal"
+    },
+    {
+      "id": "dark_thorn_princess",
+      "name": "冥荆皇女",
+      "icon": "https://patchwiki.biligame.com/images/klbq/0/03/dkghcjotslqb5vf80l6favhtjib9tio.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/0/03/dkghcjotslqb5vf80l6favhtjib9tio.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Boss",
+      "faction": "Crystal"
+    },
+    {
+      "id": "blood_thorn_princess",
+      "name": "血荆皇女",
+      "icon": "https://patchwiki.biligame.com/images/klbq/7/7a/cafu21bxfws8pzbkdogzsgis1vbetg0.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/7/7a/cafu21bxfws8pzbkdogzsgis1vbetg0.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Boss",
+      "faction": "Crystal"
+    },
+    {
+      "id": "lilith",
+      "name": "莉莉丝",
+      "icon": "https://patchwiki.biligame.com/images/klbq/b/b8/4f196dvqs0ze9um7wd7w5h4o8bofqpd.jpg",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/b/b8/4f196dvqs0ze9um7wd7w5h4o8bofqpd.jpg"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Boss",
+      "faction": "Crystal"
     }
   ]
 }

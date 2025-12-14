@@ -76,7 +76,7 @@ const factionIcon = computed(() => {
         <div class="size-9 rounded-full bg-primary flex items-center justify-center text-white shadow-soft">
           <span class="material-symbols-outlined text-[20px]">data_usage</span>
         </div>
-        <h2 class="text-[#1b0d11] text-lg font-extrabold leading-tight tracking-tight">Strinova Archive</h2>
+        <h2 class="text-[#1b0d11] text-lg font-extrabold leading-tight tracking-tight">Calabiyau Archive</h2>
       </div>
       <div class="hidden md:flex items-center gap-8">
         <NuxtLink class="text-[#554a4d] text-sm font-semibold leading-normal hover:text-primary transition-colors flex items-center gap-1" to="/">

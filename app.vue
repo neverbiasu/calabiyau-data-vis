@@ -2,7 +2,7 @@
   <div>
     <Html lang="en">
       <Head>
-        <Title>Strinova Command Center</Title>
+        <Title>Calabiyau Data Vis</Title>
         <Link rel="preconnect" href="https://fonts.googleapis.com" />
         <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
         <Link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
