@@ -14,13 +14,14 @@ export function useStrinovaData() {
     error.value = null;
 
     try {
-      // In production/dev, fetch from the static JSON file in public/
-      const response = await fetch('/data.json');
-      if (!response.ok) {
-        throw new Error(`Failed to load data: ${response.statusText}`);
-      }
-      const json = await response.json();
+      console.log('Fetching Strinova data...');
+      // Use $fetch for Nuxt compatibility (works better in SSR/Universal)
+      const json = await $fetch<RootData>('/data.json');
       data.value = json;
+      console.log('Data loaded successfully:', { 
+        characters: json.characters?.length, 
+        weapons: json.weapons?.length 
+      });
     } catch (e: any) {
       error.value = e.message;
       console.error('Error fetching Strinova data:', e);
@@ -40,6 +41,10 @@ export function useStrinovaData() {
   const getWeaponsByCharacter = (charName: string): Weapon[] => {
       // Match by character name (Chinese) stored in weapon data
       return data.value?.weapons.filter(w => w.character === charName) || [];
+  };
+  
+  const getCharacterByName = (name: string): Character | undefined => {
+    return data.value?.characters.find(c => c.name === name);
   };
   
   const FACTION_MAP: Record<string, string> = {
@@ -71,6 +76,7 @@ export function useStrinovaData() {
     fetchData,
     getWeaponById,
     getCharacterById,
+    getCharacterByName,
     getWeaponsByCharacter,
     getFaction
   };

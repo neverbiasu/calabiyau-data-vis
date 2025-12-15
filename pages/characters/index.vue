@@ -3,6 +3,8 @@ import { ref, computed, onMounted } from 'vue';
 
 const { data, fetchData, isLoading, getFaction } = useStrinovaData();
 const searchQuery = ref('');
+const activeRole = ref('All');
+const roles = ['All', 'Duelist', 'Sentinel', 'Initiator', 'Controller'];
 
 onMounted(() => {
   fetchData();
@@ -24,6 +26,21 @@ const groupedCharacters = computed(() => {
         // Filter by search
         if (searchQuery.value && !char.name.toLowerCase().includes(searchQuery.value.toLowerCase()) && !char.id.includes(searchQuery.value)) {
             return;
+        }
+
+        // Filter by Role
+        if (activeRole.value !== 'All') {
+             // Handle "Duelist / 决斗者" format or simple "Duelist"
+             const charRole = char.role || '';
+             // Map simplified roles to query
+             const roleMap: Record<string, string> = {
+                 'Duelist': 'Duelist',
+                 'Sentinel': 'Sentinel', 
+                 'Initiator': 'Initiator',
+                 'Controller': 'Controller'
+             };
+             const target = roleMap[activeRole.value] || activeRole.value;
+             if (!charRole.includes(target)) return;
         }
         
         // Use property directly from data, fallback to helper if missing
@@ -72,7 +89,24 @@ const groupedCharacters = computed(() => {
             Explore detailed stats, loadouts, and artwork for every character in the multiverse.
       </p>
     </section>
+
+    <!-- Loading State -->
+    <div v-if="isLoading && !data" class="flex flex-col items-center justify-center py-20">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+        <p class="text-gray-500">Loading character database...</p>
+    </div>
+
+    <!-- Error State -->
+    <div v-if="!isLoading && !groupedCharacters['The Scissors'].length && !groupedCharacters['Urbino'].length" class="flex flex-col items-center justify-center py-20 gap-4">
+        <span class="material-symbols-outlined text-6xl text-gray-300">cloud_off</span>
+        <h3 class="text-xl font-bold text-gray-500">Unable to load character data</h3>
+        <p class="text-sm text-gray-400">Please check your connection or try again later.</p>
+        <button @click="fetchData()" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+            Retry Connection
+        </button>
+    </div>
     
+    <div v-else class="w-full max-w-[100%] mx-auto flex flex-col items-center gap-12">
     <div class="w-full max-w-xl relative group z-20 px-6 lg:px-12">
       <div class="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       <div class="relative flex items-center w-full h-14 bg-white dark:bg-gray-800 rounded-full shadow-soft border border-white/50 dark:border-white/10 focus-within:border-primary/50 transition-all overflow-hidden px-2">
@@ -87,6 +121,19 @@ const groupedCharacters = computed(() => {
         />
         <button class="h-10 px-6 bg-primary hover:bg-red-600 text-white font-bold rounded-full transition-colors flex items-center justify-center shadow-md m-2 text-sm">
                 Search
+        </button>
+      </div>
+
+      <!-- Role Filters -->
+      <div class="flex flex-wrap justify-center gap-2 mt-6">
+        <button 
+            v-for="role in roles" 
+            :key="role"
+            @click="activeRole = role"
+            class="px-4 py-1.5 rounded-full text-sm font-bold transition-all border border-white/20 backdrop-blur-md"
+            :class="activeRole === role ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white/40 dark:bg-white/5 text-gray-600 dark:text-gray-300 hover:bg-white/60 dark:hover:bg-white/10'"
+        >
+            {{ role }}
         </button>
       </div>
     </div>
@@ -108,7 +155,14 @@ const groupedCharacters = computed(() => {
         <div class="flex gap-6 w-max">
           <NuxtLink v-for="char in groupedCharacters['The Scissors']" :key="char.id" class="group glass-panel bg-white/40 dark:bg-white/5 rounded-[2rem] overflow-hidden card-hover-effect relative w-72 md:w-80 snap-center flex-shrink-0" :to="`/characters/${char.id}`">
             <div class="aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-primary-soft to-white dark:from-primary/10 dark:to-gray-900 border-b border-white/20">
-              <img :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110"/>
+              <NuxtImg 
+                :src="char.images?.portrait || char.icon" 
+                :alt="char.name" 
+                class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                format="webp"
+                placeholder
+              />
               <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div class="p-5 relative z-10">
@@ -142,7 +196,7 @@ const groupedCharacters = computed(() => {
         <div class="flex gap-6 w-max">
            <NuxtLink v-for="char in groupedCharacters['Urbino']" :key="char.id" class="group glass-panel bg-white/40 dark:bg-white/5 rounded-[2rem] overflow-hidden card-hover-effect relative w-72 md:w-80 snap-center flex-shrink-0" :to="`/characters/${char.id}`">
             <div class="aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-blue-50 to-white dark:from-blue-500/10 dark:to-gray-900 border-b border-white/20">
-              <img :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110"/>
+              <NuxtImg :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110" loading="lazy" format="webp" />
             </div>
              <div class="p-5 relative z-10">
               <div class="flex justify-between items-start">
@@ -175,7 +229,7 @@ const groupedCharacters = computed(() => {
          <div class="flex gap-6 w-max">
             <NuxtLink v-for="char in groupedCharacters['Opal']" :key="char.id" class="group glass-panel bg-white/40 dark:bg-white/5 rounded-[2rem] overflow-hidden card-hover-effect relative w-72 md:w-80 snap-center flex-shrink-0" :to="`/characters/${char.id}`">
             <div class="aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-purple-50 to-white dark:from-purple-500/10 dark:to-gray-900 border-b border-white/20">
-              <img :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110"/>
+              <NuxtImg :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110" loading="lazy" format="webp" />
             </div>
              <div class="p-5 relative z-10">
               <div class="flex justify-between items-start">
@@ -208,7 +262,7 @@ const groupedCharacters = computed(() => {
          <div class="flex gap-6 w-max">
             <NuxtLink v-for="char in groupedCharacters['P.U.S']" :key="char.id" class="group glass-panel bg-white/40 dark:bg-white/5 rounded-[2rem] overflow-hidden card-hover-effect relative w-72 md:w-80 snap-center flex-shrink-0" :to="`/characters/${char.id}`">
             <div class="aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-red-50 to-white dark:from-red-500/10 dark:to-gray-900 border-b border-white/20">
-              <img :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110"/>
+              <NuxtImg :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110" loading="lazy" format="webp" />
             </div>
              <div class="p-5 relative z-10">
               <div class="flex justify-between items-start">
@@ -241,7 +295,7 @@ const groupedCharacters = computed(() => {
          <div class="flex gap-6 w-max">
             <NuxtLink v-for="char in groupedCharacters['Crystal']" :key="char.id" class="group glass-panel bg-white/40 dark:bg-white/5 rounded-[2rem] overflow-hidden card-hover-effect relative w-72 md:w-80 snap-center flex-shrink-0" :to="`/characters/${char.id}`">
             <div class="aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-gray-100 to-white dark:from-white/10 dark:to-gray-900 border-b border-white/20">
-              <img :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110"/>
+              <NuxtImg :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-110" loading="lazy" format="webp" />
             </div>
              <div class="p-5 relative z-10">
               <div class="flex justify-between items-start">
@@ -274,7 +328,7 @@ const groupedCharacters = computed(() => {
          <div class="flex gap-6 w-max">
             <NuxtLink v-for="char in groupedCharacters['Others']" :key="char.id" class="group glass-panel bg-white/40 dark:bg-white/5 rounded-[2rem] overflow-hidden card-hover-effect relative w-72 md:w-80 snap-center flex-shrink-0" :to="`/characters/${char.id}`">
             <div class="aspect-[3/4] w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white dark:from-white/5 dark:to-gray-900 border-b border-white/20">
-              <img :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"/>
+              <NuxtImg :src="char.images?.portrait || char.icon" :alt="char.name" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110" loading="lazy" format="webp" />
             </div>
              <div class="p-5 relative z-10">
               <div class="flex justify-between items-start">
@@ -289,6 +343,7 @@ const groupedCharacters = computed(() => {
          </div>
        </div>
     </section>
+    </div> <!-- End v-else -->
 
   </main>
   

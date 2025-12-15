@@ -69,7 +69,8 @@
         <div class="lg:col-span-6 flex flex-col items-center text-center gap-8 order-1 lg:order-2 z-20">
           <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
             <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transform scale-90 animate-pulse"></div>
-            <div class="w-full h-full bg-center bg-no-repeat bg-contain floating-2 drop-shadow-2xl" data-alt="Cute 3D anime style character mascot from Strinova floating in mid-air" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdnQArZ1s2I51Vu_UH3-55F_XOcuTCN3KRFkiI8r8cFdc--3FpibCGVaD4ZgkyYvEhDULvBFveMxW7i4ZSfdF577yg8drYh2FZpauovirmF3Ad_gzGkBZ1rpw8qFsrAauNbCfRhKnqg3PArO9R20_sR-b6prG2g2Qz1zJLCB-0pN9gBruDyclscGwM2Hk0mq94haD86HQDMNImdnr-HQDbNvh0NOzfXXsrnT6RtbgxcLq8qGMejgxxylBzh7zpUVPA2_RXlBjzB1g");'>
+            <div class="w-full h-full bg-center bg-no-repeat bg-contain floating-2 drop-shadow-2xl flex items-center justify-center">
+                 <NuxtImg src="/images/kokona_portrait.png" alt="Strinova Mascot" class="w-full h-full object-contain" format="webp" />
             </div>
           </div>
           <div class="space-y-2">

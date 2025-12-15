@@ -94,12 +94,22 @@ const filteredWeapons = computed(() => {
     </div>
 
     <!-- Loading State -->
-    <div v-if="isLoading" class="py-20 flex justify-center w-full">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+    <div v-if="isLoading && !data" class="flex flex-col items-center justify-center py-20">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+        <p class="text-gray-500">Loading armory data...</p>
+    </div>
+    
+    <!-- Error State -->
+    <div v-else-if="!isLoading && !filteredWeapons.length && !searchQuery" class="flex flex-col items-center justify-center py-20 gap-4">
+         <span class="material-symbols-outlined text-6xl text-gray-300">cloud_off</span>
+        <h3 class="text-xl font-bold text-gray-500">Unable to load weapon data</h3>
+        <button @click="fetchData()" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+            Retry Connection
+        </button>
     </div>
 
     <!-- Weapon Grid -->
-    <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+    <section v-else class="w-full max-w-[1440px] px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
       <NuxtLink 
         v-for="weapon in filteredWeapons" 
         :key="weapon.id"
@@ -107,7 +117,13 @@ const filteredWeapons = computed(() => {
         class="group glass-panel bg-white/60 dark:bg-white/5 rounded-3xl p-4 card-hover-effect flex flex-col gap-4 relative overflow-hidden"
       >
         <div class="aspect-square rounded-2xl bg-gray-100 dark:bg-black/20 relative overflow-hidden flex items-center justify-center p-4">
-            <img :src="weapon.imgs.weapon || '/placeholder-weapon.png'" :alt="weapon.name" class="w-full h-auto object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-500">
+            <NuxtImg 
+                :src="weapon.imgs.weapon || '/placeholder-weapon.png'" 
+                :alt="weapon.name" 
+                class="w-full h-auto object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+                format="webp"
+            />
             <div class="absolute top-2 right-2 bg-black/40 backdrop-blur-md px-2 py-0.5 rounded text-xs font-mono font-bold text-white uppercase">
                 {{ weapon.type }}
             </div>
@@ -147,7 +163,7 @@ const filteredWeapons = computed(() => {
 
 
 
-    </div>
+    </section>
   </main>
   
   <footer class="w-full flex flex-col items-center py-12 text-center relative z-10 border-t border-white/20">

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
+// @ts-ignore
+import RadarChart from '~/components/RadarChart.vue';
 
 const route = useRoute();
 const id = route.params.id as string;
@@ -27,26 +29,70 @@ const MOCK_DATA: Record<string, any> = {
     }
 };
 
+// Role-Based Estimation Defaults
+const DEFAULT_STATS: Record<string, { hp: number; armor: number; mobility: number }> = {
+    'Duelist': { hp: 200, armor: 50, mobility: 120 },
+    'Sentinel': { hp: 250, armor: 100, mobility: 90 },
+    'Initiator': { hp: 220, armor: 75, mobility: 110 },
+    'Controller': { hp: 225, armor: 70, mobility: 100 },
+    'Default': { hp: 200, armor: 50, mobility: 100 }
+};
+
+const getEstimatedStats = (role: string | undefined) => {
+    if (!role) return DEFAULT_STATS['Default'];
+    // Handle "Duelist / 决斗者" format
+    if (role.includes('Duelist')) return DEFAULT_STATS['Duelist'];
+    if (role.includes('Sentinel') || role.includes('Guardian')) return DEFAULT_STATS['Sentinel'];
+    if (role.includes('Initiator') || role.includes('Vanguard')) return DEFAULT_STATS['Initiator'];
+    if (role.includes('Controller') || role.includes('Support')) return DEFAULT_STATS['Controller'];
+    return DEFAULT_STATS['Default'];
+};
+
 const displayData = computed(() => {
     const real = character.value;
     const mock = MOCK_DATA[id.toLowerCase()] || {};
     
-    if (!real) return null;
+    if (!real && Object.keys(mock).length === 0) return null;
+
+    const idVal = real?.id || id;
+    const nameVal = real?.name || id;
+    const role = (real?.role && real?.role !== 'Unknown') ? real.role : (mock.role || 'Agent');
+    
+    // Check if stats are empty/default (HP 100 is often a placeholder if Armor is 0)
+    // If real is missing, we consider stats empty unless mock has them
+    const realStats = real?.stats;
+    const isStatsEmpty = !realStats || (realStats.hp <= 100 && realStats.armor === 0);
+    const estimatedStats = getEstimatedStats(role);
+    
+    // Use real stats if valid, otherwise use mock, otherwise use estimation
+    const finalStats = (!isStatsEmpty && realStats) ? realStats : (mock.stats || estimatedStats);
 
     return {
-        id: real.id,
-        name: real.name,
-        // Prefer real portrait, then real icon
-        image: real.images?.portrait || real.icon,
+        id: idVal,
+        name: nameVal,
+        // Prefer real portrait, then real icon, then fallback
+        image: real?.images?.portrait || real?.icon || '/placeholder.png',
         // Prefer real faction, then helper
-        faction: (real.faction && real.faction !== 'Unknown') ? real.faction : getFaction(real.id),
-        // Prefer mock bio/role/stats if real is missing or empty
-        role: (real.role && real.role !== 'Unknown') ? real.role : (mock.role || 'Agent'),
-        bio: real.bio || mock.bio || 'Data encrypted. Clearance level insufficient.',
-        stats: (real.stats && real.stats.hp > 0) ? real.stats : (mock.stats || { hp: 100, armor: 0, mobility: 100 }),
-        abilities: (real.abilities && real.abilities.length > 0) ? real.abilities : (mock.abilities || []),
-        weapon: mock.weaponId ? getWeaponById(mock.weaponId) : null
+        faction: (real?.faction && real?.faction !== 'Unknown') ? real.faction : getFaction(idVal),
+        role: role,
+        bio: real?.bio || mock.bio || 'Data encrypted. Clearance level insufficient.',
+        stats: finalStats,
+        abilities: (real?.abilities && real?.abilities.length > 0) ? real.abilities : (mock.abilities || []),
+        weapon: mock.weaponId ? getWeaponById(mock.weaponId) : null,
+        isEstimated: isStatsEmpty && !mock.stats // Flag to optionally show "Estimated" label
     };
+});
+
+const radarData = computed(() => {
+  if (!displayData.value) return [];
+  const s = displayData.value.stats;
+  // Normalize to 0-100 scale
+  // Max assumptions: HP=300, Armor=150, Mobility=150
+  return [
+    { label: 'Hit Points', value: Math.min(100, (s.hp / 300) * 100) },
+    { label: 'Armor', value: Math.min(100, (s.armor / 150) * 100) },
+    { label: 'Mobility', value: Math.min(100, (s.mobility / 150) * 100) },
+  ];
 });
 
 // Faction styling/colors
@@ -56,6 +102,14 @@ const factionColor = computed(() => {
     if (f === 'Urbino') return 'bg-[#eefcfd] text-blue-500';
     if (f === 'Opal') return 'bg-[#fff5fa] text-purple-500';
     return 'bg-gray-100 text-gray-500';
+});
+
+const factionHexColor = computed(() => {
+    const f = displayData.value?.faction;
+    if (f === 'The Scissors') return '#d92c5a'; // primary
+    if (f === 'Urbino') return '#3b82f6'; // blue-500
+    if (f === 'Opal') return '#a855f7'; // purple-500
+    return '#6b7280';
 });
 
 const factionIcon = computed(() => {
@@ -116,11 +170,13 @@ const factionIcon = computed(() => {
         <div class="absolute inset-0 bg-gradient-to-br from-white via-[#fff0f5] to-[#f0f8ff]"></div>
         
         <div class="absolute inset-0 flex items-end justify-center pb-0 z-10">
-          <img 
+          <NuxtImg 
             :src="displayData.image" 
             :alt="displayData.name"
             class="w-full h-full object-contain object-bottom transition-transform duration-700 ease-out group-hover:scale-105 p-4"
             style="filter: drop-shadow(0 10px 20px rgba(0,0,0, 0.1));"
+            format="webp"
+            priority
           />
         </div>
         
@@ -169,40 +225,30 @@ const factionIcon = computed(() => {
           </div>
         </section>
 
-        <section class="bg-white rounded-[2rem] p-6 shadow-card hover:shadow-soft transition-shadow border border-white">
+        <section class="bg-white rounded-[2rem] p-6 shadow-card hover:shadow-soft transition-shadow border border-white flex flex-col">
           <h3 class="text-lg font-bold text-[#1b0d11] mb-5 flex items-center gap-2">
             <span class="material-symbols-outlined text-primary">ecg_heart</span>
                          Survival Stats
           </h3>
-          <div class="space-y-5">
-            <div>
-              <div class="flex justify-between items-end mb-1.5">
-                <span class="text-xs font-bold text-[#9a4c5f] uppercase">Hit Points</span>
-                <span class="text-sm font-black text-[#1b0d11]">{{ displayData.stats.hp }}</span>
-              </div>
-              <div class="h-3 w-full bg-[#f3e7ea] rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-[#8fd3f4] to-[#84fab0] rounded-full shadow-[0_0_10px_rgba(132,250,176,0.5)]" :style="`width: ${(displayData.stats.hp / 300) * 100}%`"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between items-end mb-1.5">
-                <span class="text-xs font-bold text-[#9a4c5f] uppercase">Armor</span>
-                <span class="text-sm font-black text-[#1b0d11]">{{ displayData.stats.armor }}</span>
-              </div>
-              <div class="h-3 w-full bg-[#f3e7ea] rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-[#fccb90] to-[#d57eeb] rounded-full shadow-[0_0_10px_rgba(213,126,235,0.5)]" :style="`width: ${(displayData.stats.armor / 150) * 100}%`"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between pt-2">
-              <div class="flex items-center gap-2">
-                <div class="p-1.5 bg-gray-100 rounded-lg text-gray-500">
-                  <span class="material-symbols-outlined text-lg">sprint</span>
-                </div>
-                <span class="text-sm font-bold text-[#554a4d]">Mobility</span>
-              </div>
-              <span class="text-xl font-black text-[#1b0d11]">{{ displayData.stats.mobility }}</span>
-            </div>
+          <div class="flex-1 flex flex-col items-center justify-center relative min-h-[200px]">
+             <!-- Radar Chart -->
+             <RadarChart :data="radarData" :color="factionHexColor" />
           </div>
+          <!-- Numeric Legend -->
+           <div class="space-y-2 mt-4">
+            <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-1">
+                 <span class="font-bold text-gray-500">HP</span>
+                 <span class="font-black text-[#1b0d11]">{{ displayData.stats.hp }}</span>
+            </div>
+            <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-1">
+                 <span class="font-bold text-gray-500">Armor</span>
+                 <span class="font-black text-[#1b0d11]">{{ displayData.stats.armor }}</span>
+            </div>
+            <div class="flex justify-between items-center text-sm">
+                 <span class="font-bold text-gray-500">Mobility</span>
+                 <span class="font-black text-[#1b0d11]">{{ displayData.stats.mobility }}</span>
+            </div>
+           </div>
         </section>
       </div>
 

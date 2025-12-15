@@ -61,4 +61,17 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+
+    /* Page Transitions */
+    .page-enter-active,
+    .page-leave-active {
+        transition: all 0.3s ease-out;
+    }
+
+    .page-enter-from,
+    .page-leave-to {
+        opacity: 0;
+        transform: translateY(10px);
+        filter: blur(4px);
+    }
 }
