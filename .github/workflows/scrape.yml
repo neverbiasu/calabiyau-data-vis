@@ -1,0 +1,39 @@
+name: Weekly Data Scrape
+
+on:
+  schedule:
+    # Run every 3 days at 00:00 UTC
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Install Playwright Browsers
+        run: title npx playwright install chromium
+
+      - name: Run Wiki Scraper
+        run: bun run scripts/scrape-wiki.ts || echo "Wiki scraper failed"
+
+      - name: Run Official Gallery Scraper
+        run: bun run scripts/scrape-official-gallery.ts || echo "Gallery scraper failed"
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add public/data/
+          git commit -m "chore(data): auto-update scraped data [skip ci]" || echo "No changes to commit"
+          git push
