@@ -21,111 +21,42 @@
     </div>
   </header>
   <main class="flex-grow flex flex-col items-center w-full z-10 pt-24 pb-12 gap-24">
-    <section class="relative px-4 lg:px-12 w-full max-w-[1440px] mx-auto min-h-[85vh] flex items-center">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full items-center">
-        <div class="lg:col-span-3 flex flex-col gap-6 items-center lg:items-end order-2 lg:order-1">
-          <div class="glass-panel bg-card-light dark:bg-card-dark p-5 rounded-[2rem] shadow-soft w-full max-w-[280px] floating-1 cursor-pointer group hover:scale-105 transition-transform duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-xl">radar</span>
-                <span class="text-sm font-bold">Kokona Stats</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-400 group-hover:text-primary text-sm transition-colors">arrow_outward</span>
-            </div>
-            <div class="relative w-full aspect-square bg-primary-soft/50 dark:bg-white/5 rounded-full flex items-center justify-center p-4">
-              <svg class="w-full h-full overflow-visible drop-shadow-md" viewBox="0 0 100 100">
-                <polygon fill="none" points="50,10 90,30 90,70 50,90 10,70 10,30" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"></polygon>
-                <polygon fill="none" points="50,25 75,37.5 75,62.5 50,75 25,62.5 25,37.5" stroke="currentColor" stroke-opacity="0.1" stroke-width="1"></polygon>
-                <polygon class="group-hover:fill-primary/60 transition-colors duration-300" fill="rgba(238, 43, 91, 0.4)" points="50,10 85,35 70,75 40,80 20,50" stroke="#ee2b5b" stroke-width="2"></polygon>
-                <circle class="fill-primary" cx="50" cy="10" r="2"></circle>
-                <circle class="fill-primary" cx="85" cy="35" r="2"></circle>
-                <circle class="fill-primary" cx="70" cy="75" r="2"></circle>
-                <circle class="fill-primary" cx="40" cy="80" r="2"></circle>
-                <circle class="fill-primary" cx="20" cy="50" r="2"></circle>
-              </svg>
-              <div class="absolute bottom-2 text-[10px] text-gray-500 font-medium">Agility vs Defense</div>
-            </div>
-          </div>
-          <div class="glass-panel bg-card-light dark:bg-card-dark p-5 rounded-[2rem] shadow-soft w-full max-w-[280px] floating-3 cursor-pointer group hover:scale-105 transition-transform duration-300 hidden lg:block">
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-xl">show_chart</span>
-                <span class="text-sm font-bold">Dmg Drop-off</span>
-              </div>
-            </div>
-            <div class="h-24 w-full flex items-end justify-between gap-1 px-2 pb-2 border-b border-primary/20">
-              <div class="w-1/5 bg-primary/20 h-[80%] rounded-t-sm relative group-hover:bg-primary/30 transition-colors"></div>
-              <div class="w-1/5 bg-primary/40 h-[75%] rounded-t-sm relative group-hover:bg-primary/50 transition-colors"></div>
-              <div class="w-1/5 bg-primary/60 h-[60%] rounded-t-sm relative group-hover:bg-primary/70 transition-colors"></div>
-              <div class="w-1/5 bg-primary/80 h-[40%] rounded-t-sm relative group-hover:bg-primary/90 transition-colors"></div>
-              <div class="w-1/5 bg-primary h-[30%] rounded-t-sm relative"></div>
-            </div>
-            <div class="flex justify-between mt-2 text-[10px] text-gray-400">
-              <span>10m</span>
-              <span>50m</span>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6 flex flex-col items-center text-center gap-8 order-1 lg:order-2 z-20">
-          <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transform scale-90 animate-pulse"></div>
-            <div class="w-full h-full bg-center bg-no-repeat bg-contain floating-2 drop-shadow-2xl flex items-center justify-center">
-                 <NuxtImg src="/images/kokona_portrait.png" alt="Strinova Mascot" class="w-full h-full object-contain" format="webp" />
-            </div>
-          </div>
-          <div class="space-y-2">
-            <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-text-dark dark:text-white drop-shadow-sm">
-                            Calabiyau <br class="md:hidden"/>Data Vis
-                        </h1>
-            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium">
-                            Analyze. Strategize. <span class="text-primary font-bold">UwU.</span>
+    <!-- Hero Section with Carousel -->
+    <section class="relative w-full h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center overflow-hidden">
+      <!-- Background Carousel -->
+      <div class="absolute inset-0 z-0">
+        <HeroCarousel />
+      </div>
+
+      <!-- Content Overlay -->
+      <div class="relative z-10 flex flex-col items-center text-center gap-8 w-full max-w-4xl px-6 mt-20">
+         <div class="space-y-4 drop-shadow-2xl">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-white drop-shadow-lg">
+                Calabiyau <br class="md:hidden"/>Data Vis
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 font-medium font-jp">
+                Analyze. Strategize. <span class="text-primary font-bold">Stringify.</span>
             </p>
-          </div>
-          <div class="w-full max-w-lg relative group">
-            <div class="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="relative flex items-center w-full h-16 bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-transparent focus-within:border-primary/30 transition-all overflow-hidden p-2 pl-6">
+         </div>
+
+         <!-- Search Bar -->
+         <div class="w-full max-w-lg relative group">
+            <div class="absolute inset-0 bg-primary/40 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative flex items-center w-full h-16 bg-white/90 backdrop-blur-md dark:bg-black/60 rounded-full shadow-lg border-2 border-white/20 focus-within:border-primary/50 transition-all overflow-hidden p-2 pl-6">
               <span class="material-symbols-outlined text-gray-400 text-2xl">search</span>
-              <input class="w-full h-full bg-transparent border-none outline-none focus:ring-0 text-text-dark dark:text-white placeholder-gray-400 ml-3 text-lg" placeholder="Search for character, weapon, map..." type="text"/>
+              <input class="w-full h-full bg-transparent border-none outline-none focus:ring-0 text-text-dark dark:text-white placeholder-gray-500 ml-3 text-lg" placeholder="Search for character, weapon, map..." type="text"/>
               <button class="h-12 px-8 bg-primary hover:bg-red-600 text-white font-bold rounded-full transition-colors flex items-center justify-center shadow-md">
-                                Search
-                            </button>
+                   Search
+              </button>
             </div>
-          </div>
-          <div class="flex flex-wrap justify-center gap-3">
-            <NuxtLink class="px-5 py-2 rounded-full bg-white/60 dark:bg-white/5 border border-white/40 shadow-sm text-sm font-semibold hover:bg-white hover:text-primary transition-all" to="/characters">Characters</NuxtLink>
-            <NuxtLink class="px-5 py-2 rounded-full bg-white/60 dark:bg-white/5 border border-white/40 shadow-sm text-sm font-semibold hover:bg-white hover:text-primary transition-all" to="/weapons">Weapons</NuxtLink>
-            <a class="px-5 py-2 rounded-full bg-white/60 dark:bg-white/5 border border-white/40 shadow-sm text-sm font-semibold hover:bg-white hover:text-primary transition-all" href="#">Maps</a>
-            <a class="px-5 py-2 rounded-full bg-white/60 dark:bg-white/5 border border-white/40 shadow-sm text-sm font-semibold hover:bg-white hover:text-primary transition-all text-primary" href="#">Meta Picks</a>
-          </div>
-        </div>
-        <div class="lg:col-span-3 flex flex-col gap-6 items-center lg:items-start order-3 lg:order-3">
-          <div class="glass-panel bg-card-light dark:bg-card-dark p-5 rounded-[2rem] shadow-soft w-full max-w-[280px] floating-2 cursor-pointer group hover:scale-105 transition-transform duration-300">
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-xl">hub</span>
-                <span class="text-sm font-bold">Team Synergy</span>
-              </div>
-              <span class="material-symbols-outlined text-gray-400 group-hover:text-primary text-sm transition-colors">arrow_outward</span>
-            </div>
-            <div class="relative w-full aspect-[4/3] bg-primary-soft/30 dark:bg-white/5 rounded-3xl overflow-hidden">
-              <svg class="absolute inset-0 pointer-events-none" height="100%" width="100%">
-                <line stroke="#ee2b5b" stroke-opacity="0.3" stroke-width="2" x1="30%" x2="70%" y1="30%" y2="50%"></line>
-                <line stroke="#ee2b5b" stroke-opacity="0.3" stroke-width="2" x1="70%" x2="40%" y1="50%" y2="80%"></line>
-                <line stroke="#ee2b5b" stroke-opacity="0.3" stroke-width="2" x1="30%" x2="40%" y1="30%" y2="80%"></line>
-              </svg>
-              <div class="absolute top-[30%] left-[30%] -translate-x-1/2 -translate-y-1/2 size-10 bg-white dark:bg-gray-700 rounded-full border-2 border-primary shadow-lg flex items-center justify-center">
-                <img class="size-8 rounded-full" data-alt="Character Icon 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKBeFPLNsQ0-c7LXMciPb-lmFtYIKzoiJOL-3M4bF7Dcp2SzX0XyihqXSzT5hTf0r9gV61SbE1pbwpYOwd5C3lDF8c2_3--Oxc1cbyDoUpfBnG0BxsJOVM82HWRAMbHHjjEuXpimif0F10QLyv7_kIUI53eduFpn6kTtf9HYFY8_q4blplq3TOu7Ou6j4tg2a2sa2nrEdcR9-X0RPbgsw8pfNGfZmwQ-CFyE84EyNOi96KdRi8W4KjHh-mUH6F23SHsvjAn6lhhg8"/>
-              </div>
-              <div class="absolute top-[50%] left-[70%] -translate-x-1/2 -translate-y-1/2 size-12 bg-white dark:bg-gray-700 rounded-full border-2 border-blue-400 shadow-lg flex items-center justify-center z-10">
-                <img class="size-10 rounded-full" data-alt="Character Icon 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9i6lFnpmuRvsoish942JpfzgCviFFsmXXh2EJVU4YQ6kehalSitHWNhOW7AKdcnTWuz5H87AsKZgqxKksYXjSnOoiOMWUBLZzHCm4Wfv9r5T4UPZyJo8CJBugShd7NWjYsPw2Qm2uo6qwd6L8eAjjAfsa-SlW5w0CqRy0DX-Ok8Nug2tl_lzHnmTJMakldkUHiO-sjl6gG4tukO9fKo8xahvtlzyLQK81aVG2DN0l3_1SXxaWVbdLghO2B3534fJNMafKb9qh43I"/>
-              </div>
-              <div class="absolute top-[80%] left-[40%] -translate-x-1/2 -translate-y-1/2 size-9 bg-white dark:bg-gray-700 rounded-full border-2 border-green-400 shadow-lg flex items-center justify-center">
-                <img class="size-7 rounded-full" data-alt="Character Icon 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6YxQgDLBQpkpYvoHbhREenJMpUGJNmfJ4qsLIaDZira1-4Y36TVG3RuYGs0DtOG2SJKUGevZr1zCo4_lgZegeIznbrUnbLyHLK9itQNhVqVD8Ea1vjj-Z7n-WseM-F_zauZIaEtGseL51olVHdp0Wk1DwW7d4A2Cqf8HFD_YRiFSBEN90aWXCVvD3rCLJk2piahf0dNgjPm-qIen7IbpN5Ej4ypwPSRfTEGd7x6UEseEULpYvh1OkOuJxIBo0bdFmuMR1x0Wqdw"/>
-              </div>
-              <div class="absolute bottom-2 right-3 text-[10px] text-gray-500 font-medium bg-white/80 dark:bg-black/50 px-2 py-1 rounded-full">Support Link</div>
-            </div>
-          </div>
-        </div>
+         </div>
+
+         <!-- Quick Links -->
+         <div class="flex flex-wrap justify-center gap-3 mt-4">
+            <NuxtLink class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-sm text-white text-sm font-bold hover:bg-white hover:text-primary transition-all" to="/characters">Characters</NuxtLink>
+            <NuxtLink class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-sm text-white text-sm font-bold hover:bg-white hover:text-primary transition-all" to="/weapons">Weapons</NuxtLink>
+            <a class="px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-sm text-white text-sm font-bold hover:bg-white hover:text-primary transition-all" href="#">Maps</a>
+         </div>
       </div>
     </section>
     <section class="w-full max-w-[1280px] px-6 lg:px-12">

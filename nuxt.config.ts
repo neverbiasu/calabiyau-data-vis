@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   image: {
-    domains: ['patchwiki.biligame.com'],
+    domains: ['patchwiki.biligame.com', 'klbq-website-cdn.idreamsky.com'],
     format: ['webp', 'png'],
     screens: {
       xs: 320,
