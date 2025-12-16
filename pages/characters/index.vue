@@ -58,7 +58,7 @@ const groupedCharacters = computed(() => {
 </script>
 
 <template>
-<div class="font-display bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light min-h-screen flex flex-col overflow-x-hidden bg-gradient-animated selection:bg-primary selection:text-white pb-24">
+<div class="font-display bg-[#fcf8fa] dark:bg-[#1a0b10] text-[#1b0d11] dark:text-white min-h-screen flex flex-col overflow-x-hidden selection:bg-primary selection:text-white pb-24">
   <Navbar />
   
   <main class="flex-grow flex flex-col items-center w-full z-10 pt-32 pb-12 gap-12 px-0 lg:px-0 max-w-[100%] mx-auto">
@@ -341,21 +341,6 @@ const groupedCharacters = computed(() => {
 </template>
 
 <style scoped>
-.bg-gradient-animated {
-    background: linear-gradient(-45deg, #fff0f3, #fcecee, #eefcfd, #fff5fa);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    background-attachment: fixed;
-}
-.dark .bg-gradient-animated {
-    background: linear-gradient(-45deg, #2a141a, #1f0f13, #150a0d, #251016);
-    background-size: 400% 400%;
-}
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 .card-hover-effect {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
