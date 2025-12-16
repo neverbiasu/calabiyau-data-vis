@@ -1,25 +1,6 @@
 <template>
 <div class="font-display bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light min-h-screen flex flex-col overflow-x-hidden bg-gradient-animated selection:bg-primary selection:text-white pb-24">
-  <header class="w-full z-50 px-6 py-4 lg:px-12 fixed top-0 left-0 transition-all duration-300">
-    <div class="glass-panel mx-auto max-w-7xl rounded-full px-6 py-3 flex items-center justify-between bg-white/60 dark:bg-black/20 shadow-sm">
-      <div class="flex items-center gap-3">
-        <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
-          <span class="material-symbols-outlined text-xl">data_exploration</span>
-        </div>
-        <h2 class="text-text-dark dark:text-white text-lg font-bold tracking-tight">Calabiyau <span class="text-primary">Data Vis</span></h2>
-      </div>
-      <nav class="hidden md:flex items-center gap-8 mx-auto">
-        <NuxtLink class="text-text-dark dark:text-white/80 text-sm font-medium hover:text-primary transition-colors" to="/">Home</NuxtLink>
-        <NuxtLink class="text-text-dark dark:text-white/80 text-sm font-medium hover:text-primary transition-colors" to="/characters">Characters</NuxtLink>
-        <NuxtLink class="text-text-dark dark:text-white/80 text-sm font-medium hover:text-primary transition-colors" to="/weapons">Weapons</NuxtLink>
-        <a class="text-text-dark dark:text-white/80 text-sm font-medium hover:text-primary transition-colors" href="#">Analytics</a>
-      </nav>
-      <div class="hidden md:block w-8"></div> 
-      <button class="md:hidden text-text-dark dark:text-white">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-    </div>
-  </header>
+  <Navbar />
   <main class="flex-grow flex flex-col items-center w-full z-10 pt-24 pb-12 gap-24">
     <!-- Hero Section with Carousel -->
     <section class="relative w-full h-[600px] md:h-[700px] lg:h-[800px] flex items-center justify-center overflow-hidden">

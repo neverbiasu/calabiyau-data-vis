@@ -50,25 +50,8 @@ const computedStats = computed(() => {
 </script>
 
 <template>
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-text-dark antialiased selection:bg-primary selection:text-white">
-  <header class="sticky top-0 z-50 flex w-full items-center justify-between border-b border-[#f4e6ed] bg-[#fcf8fa]/90 backdrop-blur-md px-6 py-4 lg:px-10">
-    <div class="flex items-center gap-8">
-      <div class="flex items-center gap-3">
-        <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white shadow-glow">
-          <span class="material-symbols-outlined text-xl">data_exploration</span>
-        </div>
-        <h2 class="text-xl font-bold leading-tight tracking-tight">Calabiyau <span class="text-primary">Data</span></h2>
-      </div>
-      <nav class="hidden items-center gap-6 md:flex">
-        <NuxtLink class="text-sm font-medium text-text-dark hover:text-primary transition-colors" to="/characters">Characters</NuxtLink>
-        <NuxtLink class="text-sm font-bold text-primary" to="/weapons">Weapons</NuxtLink>
-      </nav>
-    </div>
-    <!-- Search hidden for simplicity -->
-    <div class="flex items-center gap-6">
-      <div class="h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-md bg-cover bg-center" data-alt="User profile avatar showing anime style character" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC698uffG6JCmalNlhto2qau4D1ELa3HsypJLg_g3S9mT5ycSSk9qcUUeTGzUfIX05BV6Knmz4bIn7DddOQquXWxuMiVuDB0f-PcfSrvUQsRyyIWOK8EUHNmxXJAdQxkjy1YyC9JnBoOWBIj98vwkzsYFxrwD37hoNFc2KLVRPkt4D8Cvq_GHjL8t_f9H5aI0vE7heaECdYstIPnOqUBhtxa9UDhQrsJ8MijoWdNwRcM-v2y7uqbngPB1lIlCigYHeo39r9-Uy9s_k");'></div>
-    </div>
-  </header>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-text-dark antialiased selection:bg-primary selection:text-white pt-24">
+  <Navbar />
 
   <div v-if="isLoading && !weapon" class="flex-1 flex items-center justify-center">
       <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>

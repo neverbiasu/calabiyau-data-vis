@@ -123,25 +123,8 @@ const factionIcon = computed(() => {
 </script>
 
 <template>
-<div class="bg-background-light dark:bg-background-dark font-display text-[#1b0d11] min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
-  <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f3e7ea] bg-surface-light px-6 py-3 sticky top-0 z-50 shadow-sm glass-panel">
-    <div class="flex items-center gap-8">
-      <div class="flex items-center gap-4 text-[#1b0d11]">
-        <div class="size-9 rounded-full bg-primary flex items-center justify-center text-white shadow-soft">
-          <span class="material-symbols-outlined text-[20px]">data_usage</span>
-        </div>
-        <h2 class="text-[#1b0d11] text-lg font-extrabold leading-tight tracking-tight">Calabiyau Archive</h2>
-      </div>
-      <div class="hidden md:flex items-center gap-8">
-        <NuxtLink class="text-[#554a4d] text-sm font-semibold leading-normal hover:text-primary transition-colors flex items-center gap-1" to="/">
-          <span class="material-symbols-outlined text-[18px]">home</span> Home
-        </NuxtLink>
-        <NuxtLink class="text-primary text-sm font-bold leading-normal bg-primary-soft px-3 py-1.5 rounded-full" to="/characters">Characters</NuxtLink>
-        <NuxtLink class="text-[#554a4d] text-sm font-semibold leading-normal hover:text-primary transition-colors" to="/weapons">Weapons</NuxtLink>
-      </div>
-    </div>
-    <!-- Search removed for brevity in detail page -->
-  </header>
+<div class="bg-background-light dark:bg-background-dark font-display text-[#1b0d11] min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white pt-24">
+  <Navbar />
 
   <div v-if="isLoading && !displayData" class="flex-1 flex items-center justify-center">
       <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
