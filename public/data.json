@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-14T21:03:22.669Z",
+  "last_updated": "2025-12-17T00:00:20.231Z",
   "game_version": "1.0",
   "weapons": [
     {
@@ -12,8 +12,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/c/c7/3c7tneeq5bw61nxbtrlcvvr391e81ra.png"
       },
       "stats": {
-        "damage_body": 25,
-        "damage_head": 37,
+        "damage_body": 24,
+        "damage_head": 36,
         "fire_rate": 695,
         "mag_capacity": 30,
         "reload_time": 2,
@@ -30,10 +30,42 @@
         "move_speed": 55
       },
       "computed": {
-        "dps_body": 290,
-        "dps_head": 429,
-        "burst_damage": 750,
-        "time_to_kill": 0.604
+        "dps_body": 278,
+        "dps_head": 417,
+        "burst_damage": 720,
+        "time_to_kill": 0.691
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 36,
+          "body": 24,
+          "legs": 16
+        },
+        "20米": {
+          "head": 34,
+          "body": 23,
+          "legs": 16
+        },
+        "30米": {
+          "head": 30,
+          "body": 20,
+          "legs": 14
+        },
+        "40米": {
+          "head": 28,
+          "body": 19,
+          "legs": 13
+        },
+        "50米": {
+          "head": 28,
+          "body": 19,
+          "legs": 13
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -47,7 +79,7 @@
       },
       "stats": {
         "damage_body": 23,
-        "damage_head": 28,
+        "damage_head": 29,
         "fire_rate": 790,
         "mag_capacity": 32,
         "reload_time": 2,
@@ -65,9 +97,41 @@
       },
       "computed": {
         "dps_body": 303,
-        "dps_head": 369,
+        "dps_head": 382,
         "burst_damage": 736,
         "time_to_kill": 0.608
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 28,
+          "body": 23,
+          "legs": 16
+        },
+        "20米": {
+          "head": 24,
+          "body": 19,
+          "legs": 13
+        },
+        "30米": {
+          "head": 21,
+          "body": 17,
+          "legs": 12
+        },
+        "40米": {
+          "head": 19,
+          "body": 15,
+          "legs": 10
+        },
+        "50米": {
+          "head": 19,
+          "body": 15,
+          "legs": 10
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.25,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -80,8 +144,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/d/d5/msr7u40gsvmci021ixtagltyaoidbyl.png"
       },
       "stats": {
-        "damage_body": 24,
-        "damage_head": 36,
+        "damage_body": 23,
+        "damage_head": 35,
         "fire_rate": 750,
         "mag_capacity": 32,
         "reload_time": 2,
@@ -98,10 +162,42 @@
         "move_speed": 55
       },
       "computed": {
-        "dps_body": 300,
-        "dps_head": 450,
-        "burst_damage": 768,
+        "dps_body": 288,
+        "dps_head": 438,
+        "burst_damage": 736,
         "time_to_kill": 0.64
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 34,
+          "body": 23,
+          "legs": 16
+        },
+        "20米": {
+          "head": 32,
+          "body": 21,
+          "legs": 15
+        },
+        "30米": {
+          "head": 25,
+          "body": 17,
+          "legs": 12
+        },
+        "40米": {
+          "head": 25,
+          "body": 17,
+          "legs": 12
+        },
+        "50米": {
+          "head": 25,
+          "body": 17,
+          "legs": 12
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -114,8 +210,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/3/3f/peuv3c0rd8ntdrv280ro4u9hucw4ton.png"
       },
       "stats": {
-        "damage_body": 30,
-        "damage_head": 45,
+        "damage_body": 27,
+        "damage_head": 41,
         "fire_rate": 595,
         "mag_capacity": 25,
         "reload_time": 2,
@@ -132,10 +228,42 @@
         "move_speed": 55
       },
       "computed": {
-        "dps_body": 298,
-        "dps_head": 446,
-        "burst_damage": 750,
-        "time_to_kill": 0.605
+        "dps_body": 268,
+        "dps_head": 407,
+        "burst_damage": 675,
+        "time_to_kill": 0.706
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 40,
+          "body": 27,
+          "legs": 18
+        },
+        "20米": {
+          "head": 38,
+          "body": 25,
+          "legs": 18
+        },
+        "30米": {
+          "head": 34,
+          "body": 22,
+          "legs": 16
+        },
+        "40米": {
+          "head": 32,
+          "body": 21,
+          "legs": 15
+        },
+        "50米": {
+          "head": 32,
+          "body": 21,
+          "legs": 15
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -170,6 +298,38 @@
         "dps_head": 414,
         "burst_damage": 720,
         "time_to_kill": 0.696
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 36,
+          "body": 24,
+          "legs": 16
+        },
+        "20米": {
+          "head": 35,
+          "body": 23,
+          "legs": 16
+        },
+        "30米": {
+          "head": 34,
+          "body": 22,
+          "legs": 15
+        },
+        "40米": {
+          "head": 30,
+          "body": 20,
+          "legs": 14
+        },
+        "50米": {
+          "head": 30,
+          "body": 20,
+          "legs": 14
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -182,8 +342,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/3/3c/etv89slytlolbrteposqyko2rshsj17.png"
       },
       "stats": {
-        "damage_body": 42,
-        "damage_head": 73,
+        "damage_body": 5,
+        "damage_head": 6,
         "fire_rate": 350,
         "mag_capacity": 15,
         "reload_time": 2,
@@ -200,10 +360,16 @@
         "move_speed": 57
       },
       "computed": {
-        "dps_body": 245,
-        "dps_head": 426,
-        "burst_damage": 630,
-        "time_to_kill": 0.686
+        "dps_body": 29,
+        "dps_head": 35,
+        "burst_damage": 75,
+        "time_to_kill": 6.686
+      },
+      "damage_falloff": {},
+      "body_part_multipliers": {
+        "head": 1.25,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -217,7 +383,7 @@
       },
       "stats": {
         "damage_body": 25,
-        "damage_head": 37,
+        "damage_head": 38,
         "fire_rate": 666,
         "mag_capacity": 25,
         "reload_time": 2,
@@ -235,9 +401,41 @@
       },
       "computed": {
         "dps_body": 278,
-        "dps_head": 411,
+        "dps_head": 422,
         "burst_damage": 625,
         "time_to_kill": 0.631
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 37,
+          "body": 25,
+          "legs": 17
+        },
+        "20米": {
+          "head": 36,
+          "body": 24,
+          "legs": 16
+        },
+        "30米": {
+          "head": 31,
+          "body": 21,
+          "legs": 14
+        },
+        "40米": {
+          "head": 30,
+          "body": 20,
+          "legs": 14
+        },
+        "50米": {
+          "head": 30,
+          "body": 20,
+          "legs": 14
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -250,8 +448,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/7/78/5l8mbeoifaobj5p97tvqic8877j9zr8.png"
       },
       "stats": {
-        "damage_body": 30,
-        "damage_head": 45,
+        "damage_body": 28,
+        "damage_head": 42,
         "fire_rate": 575,
         "mag_capacity": 50,
         "reload_time": 2,
@@ -268,10 +466,42 @@
         "move_speed": 54
       },
       "computed": {
-        "dps_body": 288,
-        "dps_head": 431,
-        "burst_damage": 1500,
-        "time_to_kill": 0.626
+        "dps_body": 268,
+        "dps_head": 403,
+        "burst_damage": 1400,
+        "time_to_kill": 0.73
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 42,
+          "body": 28,
+          "legs": 19
+        },
+        "20米": {
+          "head": 41,
+          "body": 27,
+          "legs": 19
+        },
+        "30米": {
+          "head": 39,
+          "body": 26,
+          "legs": 18
+        },
+        "40米": {
+          "head": 37,
+          "body": 24,
+          "legs": 17
+        },
+        "50米": {
+          "head": 35,
+          "body": 23,
+          "legs": 16
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -284,8 +514,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/4/4d/npxk9ao32l3n90n9bvg5ldw3q9u7wyt.png"
       },
       "stats": {
-        "damage_body": 28,
-        "damage_head": 42,
+        "damage_body": 26,
+        "damage_head": 39,
         "fire_rate": 650,
         "mag_capacity": 25,
         "reload_time": 2,
@@ -302,10 +532,42 @@
         "move_speed": 55
       },
       "computed": {
-        "dps_body": 303,
-        "dps_head": 455,
-        "burst_damage": 700,
+        "dps_body": 282,
+        "dps_head": 423,
+        "burst_damage": 650,
         "time_to_kill": 0.646
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 39,
+          "body": 26,
+          "legs": 18
+        },
+        "20米": {
+          "head": 37,
+          "body": 25,
+          "legs": 17
+        },
+        "30米": {
+          "head": 33,
+          "body": 22,
+          "legs": 15
+        },
+        "40米": {
+          "head": 31,
+          "body": 21,
+          "legs": 14
+        },
+        "50米": {
+          "head": 31,
+          "body": 21,
+          "legs": 14
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -340,6 +602,38 @@
         "dps_head": 438,
         "burst_damage": 860,
         "time_to_kill": 0.686
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 75,
+          "body": 43,
+          "legs": 30
+        },
+        "20米": {
+          "head": 74,
+          "body": 42,
+          "legs": 29
+        },
+        "30米": {
+          "head": 72,
+          "body": 41,
+          "legs": 28
+        },
+        "40米": {
+          "head": 68,
+          "body": 39,
+          "legs": 27
+        },
+        "50米": {
+          "head": 67,
+          "body": 38,
+          "legs": 27
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.75,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -352,8 +646,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/e/e5/3wp84rekdwbj4ft7ydex992s4jbctbz.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 24,
+        "damage_head": 30,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -374,6 +668,38 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 30,
+          "body": 24,
+          "legs": 16
+        },
+        "20米": {
+          "head": 27,
+          "body": 22,
+          "legs": 15
+        },
+        "30米": {
+          "head": 21,
+          "body": 16,
+          "legs": 11
+        },
+        "40米": {
+          "head": 21,
+          "body": 16,
+          "legs": 11
+        },
+        "50米": {
+          "head": 21,
+          "body": 16,
+          "legs": 11
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.25,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -386,8 +712,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/a/a2/o1thpxu601uvs746nmbk6lpdq80spix.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 105,
+        "damage_head": 263,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -408,6 +734,48 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "20米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "30米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "40米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "50米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "60米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "70米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        }
+      },
+      "body_part_multipliers": {
+        "head": 2.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -416,12 +784,12 @@
       "character": "心夏",
       "type": "狙击步枪",
       "imgs": {
-        "character": "https://patchwiki.biligame.com/images/klbq/4/44/jvg14awbm8ip4fmf4nlkdr7f9nd88xs.png",
+        "character": "",
         "weapon": "https://patchwiki.biligame.com/images/klbq/b/b6/kt2uw0kum0greajga4ieydxrzde7n78.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 100,
+        "damage_head": 250,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -442,40 +810,48 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
-      }
-    },
-    {
-      "id": "painted",
-      "name": "彩绘",
-      "character": "玛德蕾娜",
-      "type": "精确射手步枪",
-      "imgs": {
-        "character": "https://patchwiki.biligame.com/images/klbq/d/d6/hfq5r7kv7blidsu49fieu0b3wqbpjwu.png",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/b/b8/a63ig3i84vbf9uq44eifbql2i5rqtm2.png"
       },
-      "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
-        "fire_rate": 0,
-        "mag_capacity": 0,
-        "reload_time": 2,
-        "range": 50
+      "damage_falloff": {
+        "10米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "20米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "30米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "40米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "50米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "60米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        },
+        "70米": {
+          "head": 0,
+          "body": 0,
+          "legs": 0
+        }
       },
-      "attributes": {
-        "aim_speed": 42,
-        "accuracy": 15,
-        "handling": 58,
-        "reload_speed": 21,
-        "charge_speed": 0,
-        "fire_mode": "半自动",
-        "zoom_scale": "1.5X、2.5X",
-        "move_speed": 54
-      },
-      "computed": {
-        "dps_body": 0,
-        "dps_head": 0,
-        "burst_damage": 0,
-        "time_to_kill": 0
+      "body_part_multipliers": {
+        "head": 2.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -488,8 +864,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/6/6a/48ex25ezy96glcmrs260l9rxhx9omg8.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 34,
+        "damage_head": 60,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -510,6 +886,38 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 59,
+          "body": 34,
+          "legs": 23
+        },
+        "20米": {
+          "head": 58,
+          "body": 33,
+          "legs": 23
+        },
+        "30米": {
+          "head": 57,
+          "body": 32,
+          "legs": 22
+        },
+        "40米": {
+          "head": 54,
+          "body": 31,
+          "legs": 21
+        },
+        "50米": {
+          "head": 53,
+          "body": 30,
+          "legs": 21
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.75,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -522,8 +930,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/e/ee/sxgz0hjjeqhtfhomgx93q0x8mkh3724.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 76,
+        "damage_head": 133,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -544,74 +952,104 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 133,
+          "body": 76,
+          "legs": 53
+        },
+        "20米": {
+          "head": 132,
+          "body": 75,
+          "legs": 53
+        },
+        "30米": {
+          "head": 130,
+          "body": 74,
+          "legs": 52
+        },
+        "40米": {
+          "head": 124,
+          "body": 71,
+          "legs": 49
+        },
+        "50米": {
+          "head": 123,
+          "body": 70,
+          "legs": 49
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.75,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
-      "id": "bloom",
-      "name": "绽放",
-      "character": "珐格兰丝",
-      "type": "自动步枪",
+      "id": "painted",
+      "name": "彩绘",
+      "character": "玛德蕾娜",
+      "type": "精确射手步枪",
       "imgs": {
-        "character": "https://patchwiki.biligame.com/images/klbq/2/2a/2cau3x7z99x3butkxp7wu3w78zjk3go.png",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/a/a9/inuzlfg3wt2jqjsjzndqgx091bvsvu2.png"
+        "character": "https://patchwiki.biligame.com/images/klbq/d/d6/hfq5r7kv7blidsu49fieu0b3wqbpjwu.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/b/b8/a63ig3i84vbf9uq44eifbql2i5rqtm2.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 51,
+        "damage_head": 89,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
         "range": 50
       },
       "attributes": {
-        "aim_speed": 45,
-        "accuracy": 73,
-        "handling": 72,
-        "reload_speed": 24,
+        "aim_speed": 42,
+        "accuracy": 15,
+        "handling": 58,
+        "reload_speed": 21,
         "charge_speed": 0,
-        "fire_mode": "全自动",
-        "zoom_scale": "1.25X",
-        "move_speed": 55
+        "fire_mode": "半自动",
+        "zoom_scale": "1.5X、2.5X",
+        "move_speed": 54
       },
       "computed": {
         "dps_body": 0,
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
-      }
-    },
-    {
-      "id": "absolute_execution",
-      "name": "绝对执行",
-      "character": "忧雾",
-      "type": "自动步枪",
-      "imgs": {
-        "character": "https://patchwiki.biligame.com/images/klbq/7/7e/r18lum2gqzm6yoshtggj3u5z8qpsdlo.png",
-        "weapon": "https://patchwiki.biligame.com/images/klbq/d/d1/exwrld7u9orpwq0fz11wxpnqbx4nogj.png"
       },
-      "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
-        "fire_rate": 0,
-        "mag_capacity": 0,
-        "reload_time": 2,
-        "range": 50
+      "damage_falloff": {
+        "10米": {
+          "head": 89,
+          "body": 51,
+          "legs": 35
+        },
+        "20米": {
+          "head": 89,
+          "body": 50,
+          "legs": 35
+        },
+        "30米": {
+          "head": 87,
+          "body": 49,
+          "legs": 34
+        },
+        "40米": {
+          "head": 83,
+          "body": 47,
+          "legs": 33
+        },
+        "50米": {
+          "head": 83,
+          "body": 47,
+          "legs": 33
+        }
       },
-      "attributes": {
-        "aim_speed": 54,
-        "accuracy": 60,
-        "handling": 62,
-        "reload_speed": 24,
-        "charge_speed": 0,
-        "fire_mode": "全自动",
-        "zoom_scale": "1.25X",
-        "move_speed": 55
-      },
-      "computed": {
-        "dps_body": 0,
-        "dps_head": 0,
-        "burst_damage": 0,
-        "time_to_kill": 0
+      "body_part_multipliers": {
+        "head": 1.75,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -624,8 +1062,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/5/58/cluf8ei9l1i1acbc27xm2itzgadrp2e.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 25,
+        "damage_head": 38,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -646,6 +1084,170 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 37,
+          "body": 25,
+          "legs": 17
+        },
+        "20米": {
+          "head": 35,
+          "body": 23,
+          "legs": 16
+        },
+        "30米": {
+          "head": 28,
+          "body": 18,
+          "legs": 13
+        },
+        "40米": {
+          "head": 28,
+          "body": 18,
+          "legs": 13
+        },
+        "50米": {
+          "head": 28,
+          "body": 18,
+          "legs": 13
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
+      }
+    },
+    {
+      "id": "bloom",
+      "name": "绽放",
+      "character": "珐格兰丝",
+      "type": "自动步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/2/2a/2cau3x7z99x3butkxp7wu3w78zjk3go.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/a/a9/inuzlfg3wt2jqjsjzndqgx091bvsvu2.png"
+      },
+      "stats": {
+        "damage_body": 22,
+        "damage_head": 33,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 45,
+        "accuracy": 73,
+        "handling": 72,
+        "reload_speed": 24,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 55
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 33,
+          "body": 22,
+          "legs": 15
+        },
+        "20米": {
+          "head": 31,
+          "body": 21,
+          "legs": 14
+        },
+        "30米": {
+          "head": 27,
+          "body": 18,
+          "legs": 13
+        },
+        "40米": {
+          "head": 26,
+          "body": 17,
+          "legs": 12
+        },
+        "50米": {
+          "head": 26,
+          "body": 17,
+          "legs": 12
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
+      }
+    },
+    {
+      "id": "absolute_execution",
+      "name": "绝对执行",
+      "character": "忧雾",
+      "type": "自动步枪",
+      "imgs": {
+        "character": "https://patchwiki.biligame.com/images/klbq/7/7e/r18lum2gqzm6yoshtggj3u5z8qpsdlo.png",
+        "weapon": "https://patchwiki.biligame.com/images/klbq/d/d1/exwrld7u9orpwq0fz11wxpnqbx4nogj.png"
+      },
+      "stats": {
+        "damage_body": 24,
+        "damage_head": 36,
+        "fire_rate": 0,
+        "mag_capacity": 0,
+        "reload_time": 2,
+        "range": 50
+      },
+      "attributes": {
+        "aim_speed": 54,
+        "accuracy": 60,
+        "handling": 62,
+        "reload_speed": 24,
+        "charge_speed": 0,
+        "fire_mode": "全自动",
+        "zoom_scale": "1.25X",
+        "move_speed": 55
+      },
+      "computed": {
+        "dps_body": 0,
+        "dps_head": 0,
+        "burst_damage": 0,
+        "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 36,
+          "body": 24,
+          "legs": 16
+        },
+        "20米": {
+          "head": 33,
+          "body": 22,
+          "legs": 15
+        },
+        "30米": {
+          "head": 27,
+          "body": 18,
+          "legs": 13
+        },
+        "40米": {
+          "head": 27,
+          "body": 18,
+          "legs": 13
+        },
+        "50米": {
+          "head": 27,
+          "body": 18,
+          "legs": 13
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -658,8 +1260,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/d/d1/aiwt0qlkdsrbg6h4ul8uo77ussinm02.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 26,
+        "damage_head": 39,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -680,6 +1282,38 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {
+        "10米": {
+          "head": 39,
+          "body": 26,
+          "legs": 18
+        },
+        "20米": {
+          "head": 38,
+          "body": 25,
+          "legs": 17
+        },
+        "30米": {
+          "head": 37,
+          "body": 24,
+          "legs": 17
+        },
+        "40米": {
+          "head": 34,
+          "body": 23,
+          "legs": 16
+        },
+        "50米": {
+          "head": 33,
+          "body": 22,
+          "legs": 15
+        }
+      },
+      "body_part_multipliers": {
+        "head": 1.5,
+        "chest": 1,
+        "legs": 0.7
       }
     },
     {
@@ -692,8 +1326,8 @@
         "weapon": "https://patchwiki.biligame.com/images/klbq/9/9c/duq3fq19hr6zoso6ojrn0gg1y09r06x.png"
       },
       "stats": {
-        "damage_body": 0,
-        "damage_head": 0,
+        "damage_body": 7,
+        "damage_head": 9,
         "fire_rate": 0,
         "mag_capacity": 0,
         "reload_time": 2,
@@ -714,6 +1348,12 @@
         "dps_head": 0,
         "burst_damage": 0,
         "time_to_kill": 0
+      },
+      "damage_falloff": {},
+      "body_part_multipliers": {
+        "head": 1.25,
+        "chest": 1,
+        "legs": 0.7
       }
     }
   ],
@@ -925,7 +1565,7 @@
     {
       "id": "kokona",
       "name": "心夏",
-      "icon": "https://patchwiki.biligame.com/images/klbq/4/44/jvg14awbm8ip4fmf4nlkdr7f9nd88xs.png",
+      "icon": "",
       "images": {
         "portrait": "https://patchwiki.biligame.com/images/klbq/f/ff/6niym74t13syhh8p30wel5uu25kdm2x.png"
       },
@@ -936,25 +1576,8 @@
       },
       "abilities": [],
       "bio": "",
-      "role": "Sentinel",
-      "faction": "Opal"
-    },
-    {
-      "id": "madalena",
-      "name": "玛德蕾娜",
-      "icon": "https://patchwiki.biligame.com/images/klbq/d/d6/hfq5r7kv7blidsu49fieu0b3wqbpjwu.png",
-      "images": {
-        "portrait": "https://patchwiki.biligame.com/images/klbq/5/59/iz9ao7a8lal90mhhkquf79xwja4t99p.png"
-      },
-      "stats": {
-        "hp": 100,
-        "armor": 0,
-        "mobility": 0
-      },
-      "abilities": [],
-      "bio": "在风曳镇地图有几个箱子，并配备有这样的标签",
-      "role": "Controller",
-      "faction": "Urbino"
+      "role": "Unknown",
+      "faction": "Unknown"
     },
     {
       "id": "chiyo",
@@ -991,6 +1614,40 @@
       "faction": "The Scissors"
     },
     {
+      "id": "madalena",
+      "name": "玛德蕾娜",
+      "icon": "https://patchwiki.biligame.com/images/klbq/d/d6/hfq5r7kv7blidsu49fieu0b3wqbpjwu.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/5/59/iz9ao7a8lal90mhhkquf79xwja4t99p.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "在风曳镇地图有几个箱子，并配备有这样的标签",
+      "role": "Controller",
+      "faction": "Urbino"
+    },
+    {
+      "id": "galatea",
+      "name": "加拉蒂亚",
+      "icon": "https://patchwiki.biligame.com/images/klbq/8/8f/79h9y6t4xnboft6wx3bf08tlfacph7v.png",
+      "images": {
+        "portrait": "https://patchwiki.biligame.com/images/klbq/1/1d/pfkl2hjp3it4f8bidjzy50fntrp4unu.png"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 0,
+        "mobility": 0
+      },
+      "abilities": [],
+      "bio": "",
+      "role": "Initiator",
+      "faction": "Urbino"
+    },
+    {
       "id": "fragrans",
       "name": "珐格兰丝",
       "icon": "https://patchwiki.biligame.com/images/klbq/2/2a/2cau3x7z99x3butkxp7wu3w78zjk3go.png",
@@ -1023,23 +1680,6 @@
       "bio": "",
       "role": "Controller",
       "faction": "Opal"
-    },
-    {
-      "id": "galatea",
-      "name": "加拉蒂亚",
-      "icon": "https://patchwiki.biligame.com/images/klbq/8/8f/79h9y6t4xnboft6wx3bf08tlfacph7v.png",
-      "images": {
-        "portrait": "https://patchwiki.biligame.com/images/klbq/1/1d/pfkl2hjp3it4f8bidjzy50fntrp4unu.png"
-      },
-      "stats": {
-        "hp": 100,
-        "armor": 0,
-        "mobility": 0
-      },
-      "abilities": [],
-      "bio": "",
-      "role": "Initiator",
-      "faction": "Urbino"
     },
     {
       "id": "leona",

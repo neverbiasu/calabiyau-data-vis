@@ -416,6 +416,112 @@ const MANUAL_IMAGES: Record<string, string> = {
     '米雪儿': 'https://patchwiki.biligame.com/images/klbq/b/b9/e9glc6xvnbs2zayhk0etd6hcx7xoa7f.png',
 };
 
+async function fetchWeaponDetails(weaponPageName: string): Promise<Partial<Weapon>> {
+    const url = `https://wiki.biligame.com/klbq/${encodeURIComponent(weaponPageName)}`;
+    console.log(`Fetching Weapon Details for ${weaponPageName} from ${url}...`);
+    try {
+        const { data } = await axios.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+        const $ = cheerio.load(data);
+        const result: Partial<Weapon> = { 
+            damage_falloff: {}, 
+            body_part_multipliers: { head: 0, chest: 0, legs: 0 },
+            stats: {} as any
+        };
+
+        // 1. Parse Basic Stats (Table with class 'klbqtable weapon-table')
+        $('.klbqtable.weapon-table tr').each((i, el) => {
+            const key = $(el).find('td').eq(0).text().trim();
+            const val = $(el).find('td').eq(1).text().trim();
+            if (key.includes('射速')) result.stats!.fire_rate = cleanNum(val);
+            if (key.includes('弹匣')) result.stats!.mag_capacity = cleanNum(val);
+        });
+
+        // 2. Parse Damage Falloff (Table after '武器伤害')
+        let damageTable: cheerio.Cheerio | null = null;
+        $('h1, h2, h3, h4').each((i, el) => {
+            if ($(el).text().includes('武器伤害')) {
+                let next = $(el).next();
+                while(next.length && !next.is('table')) {
+                    next = next.next();
+                }
+                if (next.is('table')) damageTable = next;
+            }
+        });
+
+        if (damageTable) {
+             const dists: string[] = [];
+             // Headers are usually in the first row's TDs or THs, skipping the first one
+             $(damageTable).find('tr').eq(0).children().each((i, el) => {
+                 if (i > 0) dists.push($(el).text().trim());
+             });
+             
+             $(damageTable).find('tr').each((i, row) => {
+                 const part = $(row).children().eq(0).text().trim();
+                 if (['头部', '上身', '下身'].includes(part)) {
+                      $(row).children().each((j, cell) => {
+                          if (j === 0) return; // Skip label
+                          const val = cleanNum($(cell).text());
+                          const dist = dists[j - 1]; 
+                          if (dist) {
+                              if (!result.damage_falloff![dist]) result.damage_falloff![dist] = { head: 0, body: 0, legs: 0 };
+                              if (part === '头部') result.damage_falloff![dist].head = val;
+                              if (part === '上身') result.damage_falloff![dist].body = val;
+                              if (part === '下身') result.damage_falloff![dist].legs = val;
+                          }
+                      });
+                 }
+             });
+        }
+
+        // 3. Parse Multipliers (Table after '武器部位伤害系数')
+        let multiTable: cheerio.Cheerio | null = null;
+        $('h1, h2, h3, h4').each((i, el) => {
+            if ($(el).text().includes('武器部位伤害系数')) {
+                let next = $(el).next();
+                while(next.length && !next.is('table')) {
+                    next = next.next();
+                }
+                if (next.is('table')) multiTable = next;
+            }
+        });
+
+        if (multiTable) {
+             let baseDmg = 0;
+             // Iterate rows to handle TH/TD mixed structures correctly
+             $(multiTable).find('tr').each((i, row) => {
+                 $(row).children().each((j, cell) => {
+                     const txt = $(cell).text().trim().replace('：', '');
+                     const next = $(cell).next();
+                     
+                     if (next.length) {
+                        const val = cleanFloat(next.text().trim());
+                        
+                        if (txt === '基础伤害') baseDmg = val;
+                        if (txt === '头部') result.body_part_multipliers!.head = val;
+                        if (['胸部', '上身'].includes(txt)) result.body_part_multipliers!.chest = val;
+                        // Catch various leg descriptions
+                        if (['下身', '腿部', '右小腿', '左小腿', '右大腿', '左大腿'].includes(txt)) {
+                             if (!result.body_part_multipliers!.legs) result.body_part_multipliers!.legs = val;
+                        }
+                     }
+                 });
+             });
+
+             if (result.stats) {
+                 if (!result.stats.damage_body && baseDmg) result.stats.damage_body = baseDmg;
+                 if (!result.stats.damage_head && baseDmg && result.body_part_multipliers!.head) {
+                     result.stats.damage_head = Math.round(baseDmg * result.body_part_multipliers!.head);
+                 }
+             }
+        }
+
+        return result;
+    } catch (e) { 
+        console.warn(`Detail fetch warning for ${weaponPageName}:`, e);
+        return {}; 
+    }
+}
+
 async function main() {
   try {
     const selectionMap = await fetchSelectionData();
@@ -505,6 +611,25 @@ async function main() {
         },
         computed: { dps_body: 0, dps_head: 0, burst_damage: 0, time_to_kill: 0 }
       };
+
+      // --- Enhanced Detail Fetching ---
+      if (finalWeaponName !== 'Unknown Weapon') {
+          await new Promise(r => setTimeout(r, 100)); // Brief pause
+          const detailStats = await fetchWeaponDetails(finalWeaponName);
+          
+          if (detailStats.damage_falloff) weapon.damage_falloff = detailStats.damage_falloff;
+          if (detailStats.body_part_multipliers) weapon.body_part_multipliers = detailStats.body_part_multipliers;
+          
+          if (detailStats.stats) {
+              // Prefer detail stats if available
+              if (detailStats.stats.fire_rate) weapon.stats.fire_rate = detailStats.stats.fire_rate;
+              if (detailStats.stats.mag_capacity) weapon.stats.mag_capacity = detailStats.stats.mag_capacity;
+              
+              // Only update damage if we found it in details (it might be missing there)
+              if (detailStats.stats.damage_body) weapon.stats.damage_body = detailStats.stats.damage_body;
+              if (detailStats.stats.damage_head) weapon.stats.damage_head = detailStats.stats.damage_head;
+          }
+      }
       
       const rps = weapon.stats.fire_rate / 60;
       weapon.computed.dps_body = Math.round(rps * weapon.stats.damage_body);

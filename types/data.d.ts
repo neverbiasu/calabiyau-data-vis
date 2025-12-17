@@ -20,6 +20,22 @@ export interface Weapon {
     range: number;        // Meters
   };
 
+  // NEW: Damage Falloff Data (Distance -> Damage)
+  damage_falloff?: {
+      [distance: string]: {
+          head: number;
+          body: number;
+          legs: number;
+      }
+  };
+
+  // NEW: Body Part Multipliers
+  body_part_multipliers?: {
+      head: number;
+      chest: number;
+      legs: number;
+  };
+
   // Stats from Filter Table (Qualitative/Scores 0-100)
   attributes: {
     aim_speed: number;    // 瞄准速度
