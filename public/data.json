@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-17T00:00:20.231Z",
+  "last_updated": "2025-12-17T17:29:39.858Z",
   "game_version": "1.0",
   "weapons": [
     {
@@ -1366,11 +1366,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/b/b9/e9glc6xvnbs2zayhk0etd6hcx7xoa7f.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "喵喵卫士"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "猫踪喵迹"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "火力大喵"
+        }
+      ],
       "bio": "",
       "role": "Guardian",
       "faction": "Opal"
@@ -1383,11 +1399,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/e/eb/95xhhowpgnq6ljbnpjrg4b6gafojjqx.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "熊熊出击"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "皑皑藏雪"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "爽爽霜风"
+        }
+      ],
       "bio": "",
       "role": "Controller",
       "faction": "Opal"
@@ -1400,11 +1432,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/d/d1/f8gaky90dj1x8v033oj3lckj8m0iupc.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "寻影猎刃"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "曝影显踪"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "遁影藏踪"
+        }
+      ],
       "bio": "",
       "role": "Initiator",
       "faction": "The Scissors"
@@ -1417,11 +1465,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/5/55/1hmqz3kojmm8w0gm078fiacvno0dg59.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "破甲电球"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "吸能赋甲"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "强雷铸甲"
+        }
+      ],
       "bio": "",
       "role": "Duelist",
       "faction": "The Scissors"
@@ -1434,11 +1498,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/b/b5/8kla5bq9p1rf6e7z4b27og3vwge9hww.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "金沙热浪"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "时零沙环"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "流沙大葬"
+        }
+      ],
       "bio": "",
       "role": "Controller",
       "faction": "The Scissors"
@@ -1451,11 +1531,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/b/b5/rnd6snpj3nc8uectdyp7b2witm80h2q.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "炼狱牢笼"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "日珥蓄火"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "烈焰风暴"
+        }
+      ],
       "bio": "",
       "role": "Duelist",
       "faction": "The Scissors"
@@ -1468,11 +1564,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/0/04/jopjj6kjva8b46fwmmk2uju8e0odnxh.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "守护星芒"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "星弦甲生"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "星空之门"
+        }
+      ],
       "bio": "",
       "role": "Sentinel",
       "faction": "Urbino"
@@ -1485,11 +1597,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/9/97/es01spueuf0ad4hwr0drbefn2ugrswd.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "重火倾泄"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "皇家盾牌"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "狂轰滥炸"
+        }
+      ],
       "bio": "",
       "role": "Guardian",
       "faction": "Urbino"
@@ -1502,11 +1630,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/4/4a/1zz9eug0fhmajbmtiwx7gx3d30nbato.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "残息追踪"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "以战养战"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "浴血狂戮"
+        }
+      ],
       "bio": "",
       "role": "Duelist",
       "faction": "Urbino"
@@ -1519,11 +1663,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/c/ce/hzne4xefot7hen6mqjhpi05s1kl1t4e.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "守望之眼"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "致盲脉冲"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "脉冲过载"
+        }
+      ],
       "bio": "",
       "role": "Guardian",
       "faction": "Opal"
@@ -1536,11 +1696,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/6/69/axnu38pm3b67cnuwnj0q1ronh94ck6b.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "直击灵魂"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "摄魂侵魄"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "死神来了"
+        }
+      ],
       "bio": "",
       "role": "Duelist",
       "faction": "The Scissors"
@@ -1553,11 +1729,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/0/0e/k624mjrr2qmg72bplmoa73o203onshg.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "旋律回响"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "交响爆音"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "演出开始"
+        }
+      ],
       "bio": "",
       "role": "Initiator",
       "faction": "The Scissors"
@@ -1570,13 +1762,29 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/f/ff/6niym74t13syhh8p30wel5uu25kdm2x.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "治疗无人机"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "急速救援"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "卡丘重塑"
+        }
+      ],
       "bio": "",
-      "role": "Unknown",
+      "role": "Support",
       "faction": "Unknown"
     },
     {
@@ -1587,11 +1795,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/a/a4/7v10dmee1qfs5ke7o7nrdcqsblguz4t.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "爆绽瞬华"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "静心凝势"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "枫烬崩天"
+        }
+      ],
       "bio": "",
       "role": "Duelist",
       "faction": "Opal"
@@ -1604,11 +1828,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/2/2a/g8uhidjyirb4jc6tdlu297d5f9hotzr.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "破晓帷幕"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "黎明洞悉"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "庇护圣屏"
+        }
+      ],
       "bio": "",
       "role": "Controller",
       "faction": "The Scissors"
@@ -1621,11 +1861,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/5/59/iz9ao7a8lal90mhhkquf79xwja4t99p.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "颜料束缚"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "颜料脚印"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "颜料泡泡"
+        }
+      ],
       "bio": "在风曳镇地图有几个箱子，并配备有这样的标签",
       "role": "Controller",
       "faction": "Urbino"
@@ -1638,11 +1894,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/1/1d/pfkl2hjp3it4f8bidjzy50fntrp4unu.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "飞牌瞬闪"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "欺诈牌影"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "牌影戏法"
+        }
+      ],
       "bio": "",
       "role": "Initiator",
       "faction": "Urbino"
@@ -1655,11 +1927,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/5/54/tddyoawbom9olqv44ox1sm5vm9s1vky.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "活力芬芳"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "复苏芳香"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "激昂芬芳"
+        }
+      ],
       "bio": "",
       "role": "Sentinel",
       "faction": "The Scissors"
@@ -1672,11 +1960,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/4/49/a8em10uro1ob5q2cbl7fx0h9fafat9k.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "蚀甲毒雾"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "毒雾爆发"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "凌毒侵蚀"
+        }
+      ],
       "bio": "",
       "role": "Controller",
       "faction": "Opal"
@@ -1689,11 +1993,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/9/9e/r3cqvyoui3qwtptpel7a0fz85jkh5v8.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "弦能掩墙"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "劳逸结合"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "纯净坚城"
+        }
+      ],
       "bio": "",
       "role": "Guardian",
       "faction": "Opal"
@@ -1706,11 +2026,27 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/0/0e/ouqnhxot75ovmz56fffegkkxze99l05.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "炫空斗舞"
+        },
+        {
+          "name": "Ability",
+          "type": "Passive",
+          "description": "嘻哈嘣彩"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "重返街头！"
+        }
+      ],
       "bio": "",
       "role": "Duelist",
       "faction": "Urbino"
@@ -1723,11 +2059,22 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/9/9e/0w04w87nz8yt2kwgjms9rhj6mbr3umn.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "暴走"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "自爆"
+        }
+      ],
       "bio": "",
       "role": "Boss",
       "faction": "Crystal"
@@ -1740,11 +2087,22 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/9/9f/dk34eoeduf182t31fb1hjfzkl8wae2l.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "幽镰迸跃"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "疾影突袭"
+        }
+      ],
       "bio": "",
       "role": "Boss",
       "faction": "Crystal"
@@ -1757,11 +2115,22 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/0/03/dkghcjotslqb5vf80l6favhtjib9tio.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "晶迸源涌"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "减伤护盾"
+        }
+      ],
       "bio": "",
       "role": "Boss",
       "faction": "Crystal"
@@ -1774,11 +2143,22 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/7/7a/cafu21bxfws8pzbkdogzsgis1vbetg0.png"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "瞬狱强袭"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "炼狱晶爆"
+        }
+      ],
       "bio": "",
       "role": "Boss",
       "faction": "Crystal"
@@ -1791,11 +2171,22 @@
         "portrait": "https://patchwiki.biligame.com/images/klbq/b/b8/4f196dvqs0ze9um7wd7w5h4o8bofqpd.jpg"
       },
       "stats": {
-        "hp": 100,
+        "hp": 0,
         "armor": 0,
         "mobility": 0
       },
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Ability",
+          "type": "Active",
+          "description": "棘丛迷踪"
+        },
+        {
+          "name": "Ability",
+          "type": "Ultimate",
+          "description": "棘缚绽华"
+        }
+      ],
       "bio": "",
       "role": "Boss",
       "faction": "Crystal"

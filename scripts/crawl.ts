@@ -118,17 +118,25 @@ function getWeaponId(cnWeaponName: string): string {
     return id;
 }
 
-function cleanNum(val: string): number {
+
+// --- Helper Functions ---
+function cleanNum(val: string | undefined | null): number {
   if (!val) return 0;
   const match = val.match(/^(\d+)/);
-  return match ? parseInt(match[1], 10) : 0;
+  return match && match[1] ? parseInt(match[1], 10) : 0;
 }
 
-function cleanFloat(val: string): number {
+function cleanFloat(val: string | undefined | null): number {
   if (!val) return 0;
   const match = val.match(/^(\d+(\.\d+)?)/);
-  return match ? parseFloat(match[1]) : 0;
+  return match && match[1] ? parseFloat(match[1]) : 0;
 }
+
+// ...
+
+// (Deleted orphan block)
+
+
 
 async function fetchSelectionData(): Promise<Map<string, SelectionMeta>> {
     console.log(`Fetching Character Selection Data from ${URL_CHAR_SELECTION}...`);
@@ -227,7 +235,7 @@ async function fetchTheoryData(): Promise<Record<string, Partial<Weapon>>> {
        
        const fullText = cols.eq(0).text().trim();
        if (fullText.includes('：')) {
-           [charName, weaponName] = fullText.split('：').map(s => s.trim());
+           [charName, weaponName] = fullText.split('：').map(s => s.trim()) as [string, string];
        } else {
            charName = rawName.replace(/头像/g, '').replace(/\.png/g, '').replace(/·/g, '').replace(/ /g, '').trim();
        }
@@ -250,7 +258,7 @@ async function fetchTheoryData(): Promise<Record<string, Partial<Weapon>>> {
        }
 
        const dmgBodyStr = cols.eq(2 + offset).text().trim();
-       let baseDmg = parseFloat(dmgBodyStr.split('x')[0]) || 0;
+       let baseDmg = parseFloat(dmgBodyStr.split('x')[0] || '0') || 0;
        
        const headDmgStr = cols.eq(21 + offset).text().trim(); 
        const headDmg = cleanFloat(headDmgStr);
@@ -289,8 +297,8 @@ async function fetchFilterData(): Promise<Record<string, any>> {
     if (cols.length < 10) return; 
 
     const rawName = cols.eq(0).text().trim();
-    let charName = rawName.includes('：') ? rawName.split('：')[0].trim() : rawName.split('-')[0].trim();
-    let weaponName = rawName.includes('：') ? rawName.split('：')[1].trim() : '';
+    let charName = rawName.includes('：') ? rawName.split('：')[0]?.trim() || '' : rawName.split('-')[0]?.trim() || '';
+    let weaponName = rawName.includes('：') ? rawName.split('：')[1]?.trim() || '' : '';
     charName = charName.replace(/·/g, '').replace(/ /g, '').trim();
     
     const imgTag = cols.eq(0).find('img');
@@ -323,9 +331,8 @@ async function fetchFilterData(): Promise<Record<string, any>> {
 }
 
 // --- Character Detail Fetcher (Only for Bio/Stats/Images) ---
+// --- Character Detail Fetcher (Bio/Stats/Images/Abilities/Role) ---
 const fetchCharacterDetails = async (charName: string) => {
-    // Generate URL based on English ID to map back to CN URL?
-    // Actually, we pass the CN Name directly to this function.
     const url = `https://wiki.biligame.com/klbq/${encodeURIComponent(charName)}`;
     console.log(`Fetching Character Details for ${charName} from ${url}...`);
     
@@ -337,58 +344,164 @@ const fetchCharacterDetails = async (charName: string) => {
             abilities: [],
             stats: { hp: 0, armor: 0, mobility: 0 },
             images: {},
+            role: 'Unknown',
+            bio: '',
         };
 
-        // Bio extraction
-        const descMatch = $('.mw-parser-output > p').filter((i, el) => {
+        // 1. Role Extraction
+        // Strategy: Look for "定位" in any cell, check next cell
+        $('td, th').each((i, el) => {
             const txt = $(el).text().trim();
-            return txt.length > 20 && !txt.includes('.playerBox') && !txt.includes('{');
-        }).first();
-        if (descMatch.length) {
-            details.bio = descMatch.text().trim();
+            if (txt === '定位') {
+                const sibling = $(el).next().text().trim();
+                if (sibling) details.role = sibling;
+            }
+        });
+
+        // Map Roles (CN -> EN)
+        const roleMap: Record<string, string> = {
+             '守护': 'Guardian',
+             '决斗': 'Duelist',
+             '控场': 'Controller',
+             '支援': 'Support',
+             '先锋': 'Initiator'
+        };
+        for (const [cn, en] of Object.entries(roleMap)) {
+            if (details.role?.includes(cn)) details.role = en;
         }
 
-        // Stats (Dynamic)
+        // Hardcoded Fallbacks for known issues
+        const manualRoles: Record<string, string> = {
+            '香奈美': 'Support', 
+            '米雪儿': 'Guardian',
+            '信': 'Guardian',
+            '白墨': 'Duelist',
+            '令': 'Duelist',
+            '心夏': 'Support',
+            '伊薇特': 'Initiator', // Bear summoner, often Initiator/Controller
+        };
+        if ((!details.role || details.role === 'Unknown') && manualRoles[charName]) {
+            details.role = manualRoles[charName];
+        }
+
+        // 2. Bio Extraction
+        // Try #角色简介 or #角色背景
+        const bioHeader = $('#角色简介, #角色背景').parent();
+        if (bioHeader.length) {
+            let next = bioHeader.next();
+            // Skip empty elements to find text
+            let attempts = 0;
+            while(next.length && attempts < 5) {
+                 const txt = next.text().trim();
+                 if (txt.length > 20) {
+                     details.bio = txt;
+                     break;
+                 }
+                 next = next.next();
+                 attempts++;
+            }
+        }
+        // Fallback Bio (First significant paragraph)
+        if (!details.bio) {
+            const descMatch = $('.mw-parser-output > p').filter((i, el) => {
+                const txt = $(el).text().trim();
+                return txt.length > 20 && !txt.includes('.playerBox') && !txt.includes('{');
+            }).first();
+            if (descMatch.length) details.bio = descMatch.text().trim();
+        }
+        if (details.bio) details.bio = details.bio.replace(/\[.*?\]/g, '').trim();
+
+        // 3. Stats (Preserve)
         $('td').each((i, el) => {
              const text = $(el).text().trim();
-             if (text === '生命值' || text === '生命') {
-                 details.stats!.hp = cleanNum($(el).next().text().trim());
-             }
-             if (text === '护甲') {
-                 details.stats!.armor = cleanNum($(el).next().text().trim());
-             }
-             if (text === '移速' || text === '移动速度') {
-                 details.stats!.mobility = cleanNum($(el).next().text().trim());
-             }
+             if (text === '生命值' || text === '生命') details.stats!.hp = cleanNum($(el).next().text().trim());
+             if (text === '护甲') details.stats!.armor = cleanNum($(el).next().text().trim());
+             if (text === '移速' || text === '移动速度') details.stats!.mobility = cleanNum($(el).next().text().trim());
         });
+
+        // 4. Ability Extraction (Text-based searching)
+        const getSkillContent = (key: string): { name: string, desc: string } | null => {
+             let $header: any = null;
+             // Search headers and table headers for the key
+             $('h2, h3, h4, th, dt').each((i, el) => {
+                 const txt = $(el).text().trim();
+                 // Avoid "Group" headers or sidebar links
+                 if (!$header && txt.includes(key) && !txt.includes('组') && !txt.includes('筛选')) { 
+                     $header = $(el);
+                 }
+             });
+
+             if (!$header) return null;
+             
+             const headerText = $header.text().trim();
+             // e.g. "主动技能：Skill Name" or just "主动技能"
+             let name = headerText;
+             const parts = headerText.split(/：|:/);
+             if (parts.length > 1) name = parts[1].trim();
+             else name = name.replace(key, '').trim() || 'Ability';
+
+             // Find Description
+             let desc = '';
+             
+             // Determine "next" element based on element type
+             let next = $header.next();
+             if ($header.is('th')) {
+                  // If it's a table header, look at next cell or row
+                  next = $header.next('td');
+                  if (!next.length) next = $header.parent().next('tr').find('td').first();
+                  desc = next.text().trim();
+             } else {
+                 // If it's a standard header (h2/h3), look at siblings
+                 // Handle cases where ID is inside the header (so $header is span or similar? No, strict selector used above)
+                 // Just proceed to siblings.
+                 let attempts = 0;
+                 while(next.length && attempts < 5) {
+                     const txt = next.text().trim();
+                     // Heuristic: skip empty or purely technical lines
+                     if (txt.length > 5 && !txt.startsWith('冷却') && !txt.includes('Tab')) { 
+                         desc = txt;
+                         // If it's a table (skills often in tables), extract relevant cell
+                         if (next.is('table')) {
+                             desc = next.find('td').last().text().trim(); // Last cell often contains desc
+                         }
+                         if (desc.length > 5) break; 
+                     }
+                     next = next.next();
+                     attempts++;
+                 }
+             }
+             
+             return { 
+                 name: name, 
+                 desc: desc.replace(/\s+/g, ' ').substring(0, 400).trim()
+             };
+        };
+
+        const active = getSkillContent('主动技能');
+        if (active) details.abilities?.push({ name: active.name, type: 'Active', description: active.desc });
         
-        // Full Body Image
+        const passive = getSkillContent('被动技能');
+        if (passive) details.abilities?.push({ name: passive.name, type: 'Passive', description: passive.desc });
+
+        const ult = getSkillContent('终极技能');
+        if (ult) details.abilities?.push({ name: ult.name, type: 'Ultimate', description: ult.desc });
+
+
+        // 5. Images (Preserve)
         const fashionImages = new Set<string>();
-        
-        // Special handling for Lilith (Boss) which might use different image structure / file types
         if (charName === '莉莉丝') {
              $('img').each((i, el) => {
                   const src = $(el).attr('src') || '';
-                  // Lilith debug showed .jpg images that look like splash art
-                  if (src.includes('.jpg') && src.includes('/images/klbq/')) {
-                      fashionImages.add(src);
-                  }
+                  if (src.includes('.jpg') && src.includes('/images/klbq/')) fashionImages.add(src);
              });
         }
-
-
-
         $('img').each((i, el) => {
             const alt = $(el).attr('alt') || '';
             const src = $(el).attr('src') || '';
-            
-            // Strict filter: ONLY accept "Stand" / "Portrait" (立绘) images
-            // Explicitly ignore "Model" (模型) to satisfy user preference
             if (alt.includes('立绘') && !src.includes('icon')) {
                  if (src) {
                       if (src.includes('/thumb/')) {
-                          const full = src.replace('/thumb', '').split('/').slice(0, -1).join('/');
-                          fashionImages.add(full);
+                          fashionImages.add(src.replace('/thumb', '').split('/').slice(0, -1).join('/'));
                       } else {
                           fashionImages.add(src);
                       }
@@ -396,18 +509,10 @@ const fetchCharacterDetails = async (charName: string) => {
             }
         });
         if (fashionImages.size > 0) details.images!.portrait = Array.from(fashionImages)[0];
-        
-        // Default Stats
-        if (!details.stats!.hp) details.stats!.hp = 100;
 
         return details;
 
     } catch (e) {
-        console.warn(`Failed to fetch details for ${charName}:`, e);
-        return {
-            stats: { hp: 100, armor: 0, mobility: 0 },
-            bio: 'Data unavailable.'
-        };
     }
 }
 
@@ -437,7 +542,7 @@ async function fetchWeaponDetails(weaponPageName: string): Promise<Partial<Weapo
         });
 
         // 2. Parse Damage Falloff (Table after '武器伤害')
-        let damageTable: cheerio.Cheerio | null = null;
+        let damageTable: cheerio.Cheerio<any> | null = null;
         $('h1, h2, h3, h4').each((i, el) => {
             if ($(el).text().includes('武器伤害')) {
                 let next = $(el).next();
@@ -474,7 +579,7 @@ async function fetchWeaponDetails(weaponPageName: string): Promise<Partial<Weapo
         }
 
         // 3. Parse Multipliers (Table after '武器部位伤害系数')
-        let multiTable: cheerio.Cheerio | null = null;
+        let multiTable: cheerio.Cheerio<any> | null = null;
         $('h1, h2, h3, h4').each((i, el) => {
             if ($(el).text().includes('武器部位伤害系数')) {
                 let next = $(el).next();
