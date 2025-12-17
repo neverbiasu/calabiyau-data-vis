@@ -2,7 +2,12 @@
 import { computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 // @ts-ignore
+// @ts-ignore
 import RadarChart from '~/components/RadarChart.vue';
+// @ts-ignore
+import DamageLineChart from '~/components/DamageLineChart.vue';
+// @ts-ignore
+import BodyPartChart from '~/components/BodyPartChart.vue';
 
 const route = useRoute();
 const id = route.params.id as string;
@@ -14,6 +19,8 @@ onMounted(() => {
 
 const weapon = computed(() => getWeaponById(id));
 const character = computed(() => weapon.value ? getCharacterByName(weapon.value.character) : null);
+const damageFalloffData = computed(() => weapon.value?.damage_falloff);
+const bodyPartMultipliers = computed(() => weapon.value?.body_part_multipliers || { head: 1.5, chest: 1.0, legs: 0.8 });
 
 // Radar Chart Data from Attributes (0-100)
 const radarData = computed(() => {
@@ -110,8 +117,8 @@ const computedStats = computed(() => {
           </div>
         </div>
       </section>
-      <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div class="col-span-1 flex flex-col rounded-2xl bg-white p-6 shadow-kawaii">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div class="col-span-1 flex flex-col rounded-2xl bg-white p-8 shadow-kawaii">
           <div class="mb-4 flex items-center justify-between">
             <h3 class="flex items-center gap-2 text-lg font-bold text-text-dark">
               <span class="material-symbols-outlined text-primary">radar</span>
@@ -119,7 +126,7 @@ const computedStats = computed(() => {
                             </h3>
             <span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-bold text-primary">v1.0</span>
           </div>
-          <div class="relative flex flex-1 items-center justify-center py-4 min-h-[280px]">
+          <div class="relative flex flex-1 items-center justify-center py-6 min-h-[320px]">
             <RadarChart :data="radarData" color="#ff9ecd" fill-color="rgba(255, 158, 205, 0.4)" />
           </div>
           <div class="mt-4 text-center">
@@ -127,70 +134,114 @@ const computedStats = computed(() => {
             <p class="text-sm text-text-muted">Overall performance score</p>
           </div>
         </div>
-        <div class="col-span-1 lg:col-span-2 flex flex-col rounded-2xl bg-white p-6 shadow-kawaii">
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
-            <h3 class="flex items-center gap-2 text-lg font-bold text-text-dark">
-              <span class="material-symbols-outlined text-secondary">ssid_chart</span>
-                                Key Metrics
-                            </h3>
+        <div class="col-span-1 lg:col-span-2 flex flex-col gap-8">
+          <!-- Key Metrics Cards -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+             <!-- DPS Card -->
+             <div class="col-span-2 md:col-span-2 rounded-2xl bg-white p-6 shadow-kawaii relative overflow-hidden group">
+                 <div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                     <span class="material-symbols-outlined text-8xl text-rose-500">flash_on</span>
+                 </div>
+                 <div class="relative z-10">
+                     <div class="text-xs font-bold uppercase tracking-wider text-rose-400 mb-2">Damage Output</div>
+                     <div class="flex items-baseline gap-2 mb-4">
+                        <span class="text-5xl font-black text-text-dark">{{ computedStats.dps }}</span>
+                        <span class="text-base font-bold text-text-muted">DPS</span>
+                     </div>
+                     <!-- DPS Bar -->
+                     <div class="w-full h-3 bg-rose-50 rounded-full overflow-hidden">
+                         <div class="h-full bg-rose-500 rounded-full transition-all duration-1000 ease-out" :style="{ width: Math.min((computedStats.dps / 600) * 100, 100) + '%' }"></div>
+                     </div>
+                     <p class="mt-3 text-xs text-text-muted">Based on body shots (Approx.)</p>
+                 </div>
+             </div>
+
+             <!-- RPM Card -->
+             <div class="col-span-1 rounded-2xl bg-white p-6 shadow-kawaii relative overflow-hidden group hover:-translate-y-1 transition-transform">
+                 <div class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-2">Fire Rate</div>
+                 <span class="text-4xl font-black text-text-dark block mb-1">{{ computedStats.rpm }}</span>
+                 <span class="text-xs text-text-muted">RPM</span>
+                 <div class="absolute right-2 bottom-2 text-blue-500 opacity-20">
+                     <span class="material-symbols-outlined text-6xl">cyclone</span>
+                 </div>
+             </div>
+
+             <!-- Mag Card -->
+             <div class="col-span-1 rounded-2xl bg-white p-6 shadow-kawaii relative overflow-hidden group hover:-translate-y-1 transition-transform">
+                 <div class="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2">Magazine</div>
+                 <span class="text-4xl font-black text-text-dark block mb-1">{{ computedStats.mag }}</span>
+                 <span class="text-xs text-text-muted">Rounds</span>
+                 <div class="absolute right-2 bottom-2 text-purple-500 opacity-20">
+                     <span class="material-symbols-outlined text-6xl">layers</span>
+                 </div>
+             </div>
           </div>
           
-          <div class="grid grid-cols-2 gap-4 md:grid-cols-2 mb-6">
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-6 shadow-kawaii transition-transform hover:-translate-y-1">
-              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-rose-50 text-rose-400">
-                <span class="material-symbols-outlined">flash_on</span>
-              </div>
-              <div class="text-center">
-                <span class="block text-3xl font-black text-text-dark">{{ computedStats.dps }}</span>
-                <span class="text-xs font-bold uppercase tracking-wider text-text-muted">DPS (Body)</span>
-              </div>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-6 shadow-kawaii transition-transform hover:-translate-y-1">
-              <div class="relative flex h-16 w-16 items-center justify-center">
-                <span class="material-symbols-outlined text-primary text-4xl">cyclone</span>
-              </div>
-              <div class="text-center">
-                <span class="block text-2xl font-black text-text-dark">{{ computedStats.rpm }}</span>
-                <span class="text-xs font-bold uppercase tracking-wider text-text-muted">RPM</span>
-              </div>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-6 shadow-kawaii transition-transform hover:-translate-y-1">
-              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 text-blue-400">
-                <span class="material-symbols-outlined">layers</span>
-              </div>
-              <div class="text-center">
-                <span class="block text-3xl font-black text-text-dark">{{ computedStats.mag }}</span>
-                <span class="text-xs font-bold uppercase tracking-wider text-text-muted">Rounds</span>
-              </div>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-white p-6 shadow-kawaii transition-transform hover:-translate-y-1">
-              <div class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-50 text-purple-400">
-                <span class="material-symbols-outlined">update</span>
-              </div>
-              <div class="text-center w-full px-4">
-                <span class="block text-2xl font-black text-text-dark">{{ computedStats.reload }}</span>
-                <span class="mt-1 block text-xs font-bold uppercase tracking-wider text-text-muted">Reload</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="overflow-hidden rounded-2xl bg-white shadow-kawaii">
-            <div class="border-b border-gray-100 bg-[#fff5f9] p-4 px-6 flex justify-between items-center">
+          <!-- Detailed Specs (Raw Stats) -->
+          <div class="rounded-2xl bg-white shadow-kawaii overflow-hidden">
+            <div class="border-b border-gray-100 bg-[#fff5f9] p-5 px-8">
                 <h3 class="text-lg font-bold text-text-dark flex items-center gap-2">
                     <span class="material-symbols-outlined text-text-muted">table_chart</span>
-                    Raw Statistics
+                    Technical Specifications
                 </h3>
             </div>
-            <table class="w-full text-left text-sm">
-                <tbody class="divide-y divide-gray-50">
-                    <tr v-for="(val, key) in weapon.stats" :key="key" class="hover:bg-[#fff5f9] transition-colors">
-                        <td class="px-6 py-4 font-medium text-text-dark capitalize">{{ key.replace(/_/g, ' ') }}</td>
-                        <td class="px-6 py-4 text-primary font-bold">{{ val }}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+                <!-- Iterate Attributes for Bars -->
+                <div v-for="(val, key) in weapon.attributes" :key="key" class="flex flex-col gap-2">
+                    <div class="flex justify-between text-sm">
+                        <span class="font-medium text-text-muted capitalize">{{ key.replace(/_/g, ' ') }}</span>
+                        <span class="font-bold text-text-dark">{{ val }}</span>
+                    </div>
+                     <!-- Show bar for numeric 0-100 values -->
+                    <div v-if="typeof val === 'number'" class="h-2.5 w-full bg-gray-50 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full transition-all duration-1000 ease-out" 
+                             :style="{ width: Math.min(Math.max(val, 5), 100) + '%' }"></div>
+                    </div>
+                </div>
+                <!-- Extra Stats -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between text-sm">
+                        <span class="font-medium text-text-muted">Reload Time</span>
+                        <span class="font-bold text-text-dark">{{ weapon.stats.reload_time }}s</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between text-sm">
+                        <span class="font-medium text-text-muted">Effective Range</span>
+                        <span class="font-bold text-text-dark">{{ weapon.stats.range }}m</span>
+                    </div>
+                </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <!-- Damage Analysis Section -->
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <!-- Damage Falloff Chart -->
+        <div class="col-span-1 lg:col-span-2 flex flex-col rounded-2xl bg-white p-8 shadow-kawaii min-h-[400px]">
+             <div class="mb-6 flex items-center justify-between">
+                <h3 class="flex items-center gap-2 text-lg font-bold text-text-dark">
+                  <span class="material-symbols-outlined text-rose-500">show_chart</span>
+                  Damage Falloff
+                </h3>
+             </div>
+             <div class="flex-1 w-full">
+                 <DamageLineChart :data="damageFalloffData" />
+             </div>
+             <p class="mt-4 text-center text-xs text-text-muted">Damage over distance (meters)</p>
+        </div>
 
+        <!-- Body Part Multipliers -->
+        <div class="col-span-1 flex flex-col rounded-2xl bg-white p-8 shadow-kawaii">
+             <div class="mb-6 flex items-center justify-between">
+                <h3 class="flex items-center gap-2 text-lg font-bold text-text-dark">
+                  <span class="material-symbols-outlined text-blue-500">accessibility_new</span>
+                  Multipliers
+                </h3>
+             </div>
+             <div class="flex-1 w-full flex items-center justify-center">
+                 <BodyPartChart :multipliers="bodyPartMultipliers" :base-damage="weapon.stats.damage_body || 0" />
+             </div>
         </div>
       </div>
     </div>
