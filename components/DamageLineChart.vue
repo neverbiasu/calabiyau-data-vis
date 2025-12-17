@@ -33,7 +33,7 @@ const drawChart = () => {
 
   if (!rawData.length) return;
 
-  const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+  const margin = { top: 20, right: 30, bottom: 40, left: 40 };
   const width = container.clientWidth - margin.left - margin.right;
   const height = container.clientHeight - margin.top - margin.bottom;
 
@@ -52,7 +52,9 @@ const drawChart = () => {
   svg.append('g')
     .attr('transform', `translate(0,${height})`)
     .call(d3.axisBottom(x).ticks(5).tickFormat(d => `${d}m`))
-    .attr('color', '#9ca3af'); // gray-400
+    .attr('color', '#4b5563')
+    .attr('font-size', '12px')
+    .select('.domain').attr('stroke', '#cbd5e1'); // lighter stroke for axis line
 
   // Y Axis
   const maxDamage = d3.max(rawData, d => Math.max(d.head, d.body, d.legs)) || 100;

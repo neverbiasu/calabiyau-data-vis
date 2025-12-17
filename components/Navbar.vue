@@ -43,6 +43,13 @@ const route = useRoute();
         >
             Weapons
         </NuxtLink>
+        <NuxtLink 
+            to="/tools/compare" 
+            class="text-sm font-bold transition-all hover:text-primary"
+            :class="route.path.startsWith('/tools') ? 'text-primary' : 'text-text-dark dark:text-white/80'"
+        >
+            Compare
+        </NuxtLink>
       </nav>
 
       <!-- Right: Mobile Menu Button (Placeholder) / Socials -->
