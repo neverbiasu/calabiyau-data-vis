@@ -13,6 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
@@ -22,7 +27,7 @@ jobs:
         run: bun install
 
       - name: Install Playwright Browsers
-        run: title npx playwright install chromium
+        run: npx playwright install chromium
 
       - name: Run Wiki Scraper
         run: bun run scripts/scrape-wiki.ts || echo "Wiki scraper failed"
