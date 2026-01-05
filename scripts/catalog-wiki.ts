@@ -58,7 +58,7 @@ interface CategorySummary {
 
 async function fetchPage(url: string) {
     try {
-        const fullUrl = url.startsWith('http') ? url : `${BASE_URL}${url}`;
+        const fullUrl = url.startsWith('http') ? url : `${BASE_URL}${encodeURI(decodeURI(url))}`;
         const { data } = await axios.get(fullUrl, { 
             headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' } 
         });
@@ -223,6 +223,10 @@ async function main() {
         md += `\n</details>\n\n`;
     });
 
+    const dir = path.dirname(OUTPUT_FILE);
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+    }
     fs.writeFileSync(OUTPUT_FILE, md);
     console.log(`Catalog saved to ${OUTPUT_FILE}`);
 }
