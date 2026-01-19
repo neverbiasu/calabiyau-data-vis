@@ -1,6 +1,6 @@
 # Wiki Data Integration Catalog
 
-> Automatically generated on 2026-01-12T04:53:35.854Z
+> Automatically generated on 2026-01-19T04:54:50.308Z
 
 This document outlines all available data sources discovered on the official Wiki. Select the data points you wish to integrate into the visualization dashboard.
 
@@ -9,7 +9,7 @@ This document outlines all available data sources discovered on the official Wik
 | Category | Pages Found | Status |
 |----------|-------------|--------|
 | **Characters** | 23 | ✅ Available |
-| **Weapons** | 39 | ✅ Available |
+| **Weapons** | 33 | ✅ Available |
 | **Maps** | 26 | ✅ Available |
 | **Game Modes** | 0 | ❌ Not Found |
 
@@ -23,8 +23,8 @@ This document outlines all available data sources discovered on the official Wik
 |------------|---------------|
 | Section: 超弦体设定 | 香奈美 Kanami カナミ 性别 女 身份 灵魂歌姬 定位 先锋 阵营 剪刀手 声优 中文：宴宁日文：内田真礼 画师 卡丘画师协会 生日 1月27... |
 | Section: 超弦体武器 | 武器详情、原型资料等请前往武器页查看。 |
-| Section: 超弦体时装 | 夜莺花的私语世纪歌姬浪漫华彩最强应援雪夜风谣交响情梦踏雪寻鸢零时之约心跳回忆萤光海之梦超银河歌姬浪舞心涟蔚蓝魔影乡野芳华甜心梦魇聚焦主流极夜之舞向阳舞台温热咖味幸运音律糖果波普薄荷之夏模型正面模型背面... |
-| Section: 角色技能 | 技能描述 技能视频演示 技能解析 技能数值 主动技能旋律回响发射声呐片生成探测区域，范围内的敌人会被透视被动技能交响爆音主武器的子弹落点可产生音波区，范围内的敌人会被透视给自己终极技能演出开始展... |
+| Section: 超弦体时装 | Lua错误 在模块:卡拉彼丘的第122行：attempt to index local 'frame' (a nil value) |
+| Section: 角色技能 | 技能描述 技能视频演示 技能解析 技能数值 Lua错误 在模块:卡拉彼丘的第122行：attempt to index local 'frame' (a nil value) 主动技能 ... |
 | Section: 弦能增幅网络 | 爆破模式极限推进模式弦区争夺模式 展开全部属性变化 $(document).ready(function() { const $collapses = $('.growthcollapse'... |
 | Section: 印迹 | 等级1印迹 等级2印迹 等级3印迹 等级4印迹 歌声激荡【你听到香奈美的歌声时，香奈美已经看到你了哦！】获得方式：一般爆破/排位爆破的匹配比赛中，使用香奈美的声呐片探测到... |
 | Section: 角色表情 | N/A |
@@ -50,8 +50,8 @@ This document outlines all available data sources discovered on the official Wik
 - [白墨](https://wiki.biligame.com/klbq/%E7%99%BD%E5%A2%A8)
 - [玛拉](https://wiki.biligame.com/klbq/%E7%8E%9B%E6%8B%89)
 - [绯莎](https://wiki.biligame.com/klbq/%E7%BB%AF%E8%8E%8E)
-- [千代](https://wiki.biligame.com/klbq/%E5%8D%83%E4%BB%A3)
 - [明](https://wiki.biligame.com/klbq/%E6%98%8E)
+- [千代](https://wiki.biligame.com/klbq/%E5%8D%83%E4%BB%A3)
 - [米雪儿·李](https://wiki.biligame.com/klbq/%E7%B1%B3%E9%9B%AA%E5%84%BF%C2%B7%E6%9D%8E)
 - [信](https://wiki.biligame.com/klbq/%E4%BF%A1)
 - [蕾欧娜](https://wiki.biligame.com/klbq/%E8%95%BE%E6%AC%A7%E5%A8%9C)
@@ -68,14 +68,14 @@ This document outlines all available data sources discovered on the official Wik
 </details>
 
 ## Weapons Data Points
-**Total Entities**: 39
+**Total Entities**: 33
 
 ### Available Fields (Detected from Samples)
 | Field Name | Example Value |
 |------------|---------------|
 | Section: 武器数据 | 名称 独舞 使用者 芙拉薇娅 类型 微型冲锋枪 介绍 体积轻巧，可快速连续发射，拥有较同类枪械更出色的精确度，配备1.25倍瞄准镜。 辅助攻击 开镜模式 开火模式 全自... |
 | Section: 武器伤害 | 射击目标为靶场人形靶 头部 上肢 下肢 10米 26 21 14 20米 24 19 13 30米 18 15 10 40米 18 14 10 ... |
-| Section: 武器外观 | 浮生万相音浪游戏夜色幽蓝圣骸灵蝶海中觅珍香浓风味碎愿轻语一骑绝尘警戒线南客之舞靓丽秘诀回味时光启明星夏日派对招财猫纸牌屋暗金浪涌雷火碎梦警戒落日彩斑炫彩锦鲤 |
+| Section: 武器外观 | Lua错误 在模块:卡拉彼丘的第122行：attempt to index local 'frame' (a nil value) |
 | Section: 武器准镜样式 | 武器瞄准镜样式由广大玩家提供，卡丘作战室负责整理，在此对提供玩家表示感谢！如需补充，请添加首页WIKI游戏交流群257624794提供截图。× /*<pre>*/.alert.alert-dismis... |
 | Section: 超弦体移速表 | 未持有主武器时、持有副武器时、持有战术道具时 移动状态 疾跑移速 行走/腰射移速 开镜瞄准移速 前进状态 6米/秒 5.1米/秒 3米/秒 横向移动状态、后退状态 5.1米/... |
 | Section: 相关图片 | 移动端和APP用户也可以左右滑动查看更多图片喔 |
@@ -93,32 +93,26 @@ This document outlines all available data sources discovered on the official Wik
 - [独舞](https://wiki.biligame.com/klbq/%E7%8B%AC%E8%88%9E)
 - [幻霜](https://wiki.biligame.com/klbq/%E5%B9%BB%E9%9C%9C)
 - [夜镰](https://wiki.biligame.com/klbq/%E5%A4%9C%E9%95%B0)
-- [谢幕曲](https://wiki.biligame.com/klbq/%E8%B0%A2%E5%B9%95%E6%9B%B2)
 - [空境](https://wiki.biligame.com/klbq/%E7%A9%BA%E5%A2%83)
+- [谢幕曲](https://wiki.biligame.com/klbq/%E8%B0%A2%E5%B9%95%E6%9B%B2)
 - [审判官](https://wiki.biligame.com/klbq/%E5%AE%A1%E5%88%A4%E5%AE%98)
 - [枫鸣](https://wiki.biligame.com/klbq/%E6%9E%AB%E9%B8%A3)
 - [破晓](https://wiki.biligame.com/klbq/%E7%A0%B4%E6%99%93)
 - [彩绘](https://wiki.biligame.com/klbq/%E5%BD%A9%E7%BB%98)
+- [绝对执行](https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C)
+- [齿锋](https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B)
+- [北极星](https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F)
 - [逆焰](https://wiki.biligame.com/klbq/%E9%80%86%E7%84%B0)
 - [警探](https://wiki.biligame.com/klbq/%E8%AD%A6%E6%8E%A2)
 - [影袭](https://wiki.biligame.com/klbq/%E5%BD%B1%E8%A2%AD)
 - [欺诈师](https://wiki.biligame.com/klbq/%E6%AC%BA%E8%AF%88%E5%B8%88)
 - [绽放](https://wiki.biligame.com/klbq/%E7%BB%BD%E6%94%BE)
 - [隼](https://wiki.biligame.com/klbq/%E9%9A%BC)
-- [绝对执行](https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C)
-- [齿锋](https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B)
-- [北极星](https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F)
 - [卫冕](https://wiki.biligame.com/klbq/%E5%8D%AB%E5%86%95)
 - [校准仪](https://wiki.biligame.com/klbq/%E6%A0%A1%E5%87%86%E4%BB%AA)
 - [鸣火](https://wiki.biligame.com/klbq/%E9%B8%A3%E7%81%AB)
 - [潮音](https://wiki.biligame.com/klbq/%E6%BD%AE%E9%9F%B3)
 - [自由意志](https://wiki.biligame.com/klbq/%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97)
-- [战镰](https://wiki.biligame.com/klbq/%E6%88%98%E9%95%B0)
-- [忍锋](https://wiki.biligame.com/klbq/%E5%BF%8D%E9%94%8B)
-- [雪鸮](https://wiki.biligame.com/klbq/%E9%9B%AA%E9%B8%AE)
-- [重焰](https://wiki.biligame.com/klbq/%E9%87%8D%E7%84%B0)
-- [焚焰者](https://wiki.biligame.com/klbq/%E7%84%9A%E7%84%B0%E8%80%85)
-- [小蜜蜂](https://wiki.biligame.com/klbq/%E5%B0%8F%E8%9C%9C%E8%9C%82)
 - [风场雷](https://wiki.biligame.com/klbq/%E9%A3%8E%E5%9C%BA%E9%9B%B7)
 - [雪球](https://wiki.biligame.com/klbq/%E9%9B%AA%E7%90%83)
 - [防弹屏障](https://wiki.biligame.com/klbq/%E9%98%B2%E5%BC%B9%E5%B1%8F%E9%9A%9C)
