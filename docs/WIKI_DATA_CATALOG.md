@@ -1,6 +1,6 @@
 # Wiki Data Integration Catalog
 
-> Automatically generated on 2026-02-09T05:38:27.305Z
+> Automatically generated on 2026-02-16T05:27:57.249Z
 
 This document outlines all available data sources discovered on the official Wiki. Select the data points you wish to integrate into the visualization dashboard.
 
@@ -75,7 +75,7 @@ This document outlines all available data sources discovered on the official Wik
 |------------|---------------|
 | Section: 武器数据 | 名称 独舞 使用者 芙拉薇娅 类型 微型冲锋枪 介绍 体积轻巧，可快速连续发射，拥有较同类枪械更出色的精确度，配备1.25倍瞄准镜。 辅助攻击 开镜模式 开火模式 全自... |
 | Section: 武器伤害 | 射击目标为靶场人形靶 头部 上肢 下肢 10米 26 21 14 20米 24 19 13 30米 18 15 10 40米 18 14 10 ... |
-| Section: 武器外观 | 浮生万相音浪游戏夜色幽蓝圣骸灵蝶海中觅珍香浓风味灯彩莺时碎愿轻语一骑绝尘警戒线南客之舞靓丽秘诀回味时光启明星夏日派对招财猫纸牌屋暗金浪涌雷火碎梦警戒落日彩斑炫彩锦鲤文件:独舞外观-灯彩莺时.jpg |
+| Section: 武器外观 | 浮生万相音浪游戏夜色幽蓝圣骸灵蝶海中觅珍香浓风味灯彩莺时碎愿轻语一骑绝尘警戒线南客之舞靓丽秘诀回味时光启明星夏日派对招财猫纸牌屋暗金浪涌雷火碎梦警戒落日彩斑炫彩锦鲤 |
 | Section: 武器准镜样式 | 武器瞄准镜样式由广大玩家提供，卡丘作战室负责整理，在此对提供玩家表示感谢！如需补充，请添加首页WIKI游戏交流群257624794提供截图。× /*<pre>*/.alert.alert-dismis... |
 | Section: 超弦体移速表 | 未持有主武器时、持有副武器时、持有战术道具时 移动状态 疾跑移速 行走/腰射移速 开镜瞄准移速 前进状态 6米/秒 5.1米/秒 3米/秒 横向移动状态、后退状态 5.1米/... |
 | Section: 相关图片 | 移动端和APP用户也可以左右滑动查看更多图片喔 |
@@ -93,21 +93,21 @@ This document outlines all available data sources discovered on the official Wik
 - [独舞](https://wiki.biligame.com/klbq/%E7%8B%AC%E8%88%9E)
 - [幻霜](https://wiki.biligame.com/klbq/%E5%B9%BB%E9%9C%9C)
 - [夜镰](https://wiki.biligame.com/klbq/%E5%A4%9C%E9%95%B0)
-- [空境](https://wiki.biligame.com/klbq/%E7%A9%BA%E5%A2%83)
 - [谢幕曲](https://wiki.biligame.com/klbq/%E8%B0%A2%E5%B9%95%E6%9B%B2)
+- [空境](https://wiki.biligame.com/klbq/%E7%A9%BA%E5%A2%83)
 - [审判官](https://wiki.biligame.com/klbq/%E5%AE%A1%E5%88%A4%E5%AE%98)
 - [枫鸣](https://wiki.biligame.com/klbq/%E6%9E%AB%E9%B8%A3)
 - [破晓](https://wiki.biligame.com/klbq/%E7%A0%B4%E6%99%93)
 - [彩绘](https://wiki.biligame.com/klbq/%E5%BD%A9%E7%BB%98)
-- [绝对执行](https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C)
-- [齿锋](https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B)
-- [北极星](https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F)
 - [逆焰](https://wiki.biligame.com/klbq/%E9%80%86%E7%84%B0)
 - [警探](https://wiki.biligame.com/klbq/%E8%AD%A6%E6%8E%A2)
 - [影袭](https://wiki.biligame.com/klbq/%E5%BD%B1%E8%A2%AD)
 - [欺诈师](https://wiki.biligame.com/klbq/%E6%AC%BA%E8%AF%88%E5%B8%88)
 - [绽放](https://wiki.biligame.com/klbq/%E7%BB%BD%E6%94%BE)
 - [隼](https://wiki.biligame.com/klbq/%E9%9A%BC)
+- [绝对执行](https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C)
+- [齿锋](https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B)
+- [北极星](https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F)
 - [卫冕](https://wiki.biligame.com/klbq/%E5%8D%AB%E5%86%95)
 - [校准仪](https://wiki.biligame.com/klbq/%E6%A0%A1%E5%87%86%E4%BB%AA)
 - [鸣火](https://wiki.biligame.com/klbq/%E9%B8%A3%E7%81%AB)
