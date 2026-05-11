@@ -1,6 +1,6 @@
 # Wiki Data Integration Catalog
 
-> Automatically generated on 2026-05-04T06:40:47.279Z
+> Automatically generated on 2026-05-11T07:45:57.950Z
 
 This document outlines all available data sources discovered on the official Wiki. Select the data points you wish to integrate into the visualization dashboard.
 
@@ -31,7 +31,7 @@ This document outlines all available data sources discovered on the official Wik
 | Section: 官方表情 | N/A |
 | Section: 角色相关 | N/A |
 | Section: 角色故事【幻与真的私人邀请】 | 当印有火烈鸟纹章的邀请函递呈到星庇所时，你多少感到有些意外：那位声名遐迩的魔术师女士仍然在普雷顿进行公开巡演她为何还有余裕向你递出这份私人邀请呢？ 应邀来到加拉蒂亚在普雷顿的临时住所，门扉后的房间与外... |
-| Section: 角色故事 | 加拉蒂亚：《知我所见》 /*<pre>*/ .game-story-box { margin: 15px; background-color: rgba(255, 255, 255,... |
+| Section: 角色故事 | 加拉蒂亚：《知我所见》 /*<pre>*/ .nav-chara { display: flex; flex-wrap: wrap; text-align: center; } .nav-cha... |
 | Section: 相关剧情 | 玩玩闹闹沐春大聚餐 |
 | Section: 更新改动历史 | 2026年1月27日更新 |
 | Section: 印迹 | 等级1印迹 等级2印迹 等级3印迹 等级4印迹 斩断虚妄【我看到的是你们看不到的东西。】获得方式：一般爆破/排位爆破的匹配比赛中，使用拉薇脉冲刀探测到500人 ... |
@@ -48,8 +48,8 @@ This document outlines all available data sources discovered on the official Wik
 - [白墨](https://wiki.biligame.com/klbq/%E7%99%BD%E5%A2%A8)
 - [玛拉](https://wiki.biligame.com/klbq/%E7%8E%9B%E6%8B%89)
 - [绯莎](https://wiki.biligame.com/klbq/%E7%BB%AF%E8%8E%8E)
-- [明](https://wiki.biligame.com/klbq/%E6%98%8E)
 - [千代](https://wiki.biligame.com/klbq/%E5%8D%83%E4%BB%A3)
+- [明](https://wiki.biligame.com/klbq/%E6%98%8E)
 - [汐](https://wiki.biligame.com/klbq/%E6%B1%90)
 - [芙拉薇娅](https://wiki.biligame.com/klbq/%E8%8A%99%E6%8B%89%E8%96%87%E5%A8%85)
 - [信](https://wiki.biligame.com/klbq/%E4%BF%A1)
@@ -84,30 +84,30 @@ This document outlines all available data sources discovered on the official Wik
 | Section: 简介 | 2005年底，美国转型国防工业公司（Transformational Defense Industries，简称TDI）公布了一种外形古怪的.45 ACP口径冲锋枪，名为“KRISS Super V”... |
 | Section: 更新改动历史 | 2026年3月10日更新 |
 | Section: 概述 | 型号 全长(mm) 全宽(mm) 全高(mm) 空枪重(kg) 瞄准基线长(mm) 枪管长(mm) 初速(米/秒) 射速(RPM) 弹匣容量 发射方式 枪托 MP5A2 6... |
-| Section: MP5A5 | 20世纪80年代，突击步枪开始流行3发点射的功能。于是在1985年，HK公司也推出了有3发点射功能的MP5新改型——MP5A4和MP5A5。 与MP5A2和A3相比，MP5A4、A5主要的改进是内装3... |
 | Section: MP5A1 | 通过试用，HK公司对MP5原枪型的瞄具进行了改进，将翻转式照门改为可在25～100m之间调整的回转环式照门；露出的准星改为带防护圈的准星；带鳍状物的枪管改为光滑的不带鳍状物枪管；枪管前方增加了三片式的... |
+| Section: MP5A5 | 20世纪80年代，突击步枪开始流行3发点射的功能。于是在1985年，HK公司也推出了有3发点射功能的MP5新改型——MP5A4和MP5A5。 与MP5A2和A3相比，MP5A4、A5主要的改进是内装3... |
 
 <details>
 <summary>View All Pages</summary>
 
 - [独舞](https://wiki.biligame.com/klbq/%E7%8B%AC%E8%88%9E)
-- [幻霜](https://wiki.biligame.com/klbq/%E5%B9%BB%E9%9C%9C)
 - [夜镰](https://wiki.biligame.com/klbq/%E5%A4%9C%E9%95%B0)
-- [空境](https://wiki.biligame.com/klbq/%E7%A9%BA%E5%A2%83)
+- [幻霜](https://wiki.biligame.com/klbq/%E5%B9%BB%E9%9C%9C)
 - [谢幕曲](https://wiki.biligame.com/klbq/%E8%B0%A2%E5%B9%95%E6%9B%B2)
+- [空境](https://wiki.biligame.com/klbq/%E7%A9%BA%E5%A2%83)
 - [审判官](https://wiki.biligame.com/klbq/%E5%AE%A1%E5%88%A4%E5%AE%98)
 - [枫鸣](https://wiki.biligame.com/klbq/%E6%9E%AB%E9%B8%A3)
 - [破晓](https://wiki.biligame.com/klbq/%E7%A0%B4%E6%99%93)
 - [彩绘](https://wiki.biligame.com/klbq/%E5%BD%A9%E7%BB%98)
-- [绝对执行](https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C)
-- [齿锋](https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B)
-- [北极星](https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F)
 - [逆焰](https://wiki.biligame.com/klbq/%E9%80%86%E7%84%B0)
 - [警探](https://wiki.biligame.com/klbq/%E8%AD%A6%E6%8E%A2)
 - [影袭](https://wiki.biligame.com/klbq/%E5%BD%B1%E8%A2%AD)
 - [欺诈师](https://wiki.biligame.com/klbq/%E6%AC%BA%E8%AF%88%E5%B8%88)
 - [绽放](https://wiki.biligame.com/klbq/%E7%BB%BD%E6%94%BE)
 - [隼](https://wiki.biligame.com/klbq/%E9%9A%BC)
+- [绝对执行](https://wiki.biligame.com/klbq/%E7%BB%9D%E5%AF%B9%E6%89%A7%E8%A1%8C)
+- [齿锋](https://wiki.biligame.com/klbq/%E9%BD%BF%E9%94%8B)
+- [北极星](https://wiki.biligame.com/klbq/%E5%8C%97%E6%9E%81%E6%98%9F)
 - [卫冕](https://wiki.biligame.com/klbq/%E5%8D%AB%E5%86%95)
 - [校准仪](https://wiki.biligame.com/klbq/%E6%A0%A1%E5%87%86%E4%BB%AA)
 - [鸣火](https://wiki.biligame.com/klbq/%E9%B8%A3%E7%81%AB)
