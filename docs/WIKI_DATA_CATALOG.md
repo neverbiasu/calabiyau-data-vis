@@ -1,6 +1,6 @@
 # Wiki Data Integration Catalog
 
-> Automatically generated on 2026-08-17T04:44:02.362Z
+> Automatically generated on 2026-08-24T04:47:51.972Z
 
 This document outlines all available data sources discovered on the official Wiki. Select the data points you wish to integrate into the visualization dashboard.
 
@@ -21,47 +21,45 @@ This document outlines all available data sources discovered on the official Wik
 ### Available Fields (Detected from Samples)
 | Field Name | Example Value |
 |------------|---------------|
-| Section: 超弦体设定 | 香奈美 Kanami カナミ 性别 女 身份 灵魂歌姬 定位 先锋 阵营 剪刀手 声优 中文：宴宁日文：内田真礼 画师 卡丘画师协会 生日 1月27... |
-| Section: 超弦体时装 | 夜莺花的私语传说 ▾世纪歌姬世纪歌姬-天籁之音世纪歌姬-余烬之光世纪歌姬-极夜声浪世纪歌姬-心语交织心之奏鸣心之奏鸣-狂想心之奏鸣-夜莺心之奏鸣-恋歌心之奏鸣-海妖完美 ▾浪漫华彩零时之约心跳回忆乡野... |
+| Section: 超弦体设定 | 拉薇 Lawine ラヴィーネ 性别 女 身份 第三执行者 定位 先锋 阵营 剪刀手 声优 中文：林簌日文：野上由加奈 画师 卡丘画师协会 生日 1... |
+| Section: 超弦体时装 | 破刃空谷幽兰传说 ▾千秋岁引千秋岁引-腊前梅千秋岁引-风入松千秋岁引-紫萸香千秋岁引-山外云完美 ▾潇潇疏影反叛之声真理搜寻者片翼刀锋灰狼奇遇独奏孤声星河幻影荒野行动黑红交错摇曳轻纱翠翎兰息幻刃刀锋望... |
 | Section: 超弦体武器 | 武器详情、原型资料等请前往武器页查看。 |
-| Section: 角色技能 | 技能描述 技能视频演示 技能解析 技能数值 主动技能旋律回响发射声呐片生成探测区域，透视范围内的敌人。落点处会产生音波区，短暂透视音波内的敌人并对召唤物造成伤害被动技能交响爆音主武器的子弹落点可... |
+| Section: 角色技能 | 技能描述 技能视频演示 技能解析 技能数值 主动技能寻影猎刃丢出脉冲刀制造磁场区域，透视范围内的敌人，扫描到敌方角色会对其造成护甲伤害并提升自身移速被动技能曝影显踪瞄准时的移速大幅提升，使用枪械... |
 | Section: 弦能增幅网络 | 爆破模式极限推进模式弦区争夺模式 展开全部属性变化 window.RLQ = window.RLQ || []; window.RLQ.push(function() { $(document)... |
-| Section: 印迹 | 等级1印迹 等级2印迹 等级3印迹 等级4印迹 歌声激荡【你听到香奈美的歌声时，香奈美已经看到你了哦！】获得方式：一般爆破/排位爆破的匹配比赛中，使用香奈美的声呐片探测到... |
+| Section: 印迹 | 等级1印迹 等级2印迹 等级3印迹 等级4印迹 斩断虚妄【我看到的是你们看不到的东西。】获得方式：一般爆破/排位爆破的匹配比赛中，使用拉薇脉冲刀探测到500人 ... |
 | Section: 角色表情 | N/A |
-| Section: 游戏表情 | 被击倒求救表情 被击倒求救表情2 恳求“拜托你了~”获得方式：特别行动S1战令商城 招呼... |
+| Section: 游戏表情 | 被击倒求救表情 被击倒求救表情2 吐舌“切，太弱了。”获得方式：特别行动S1战令商城 凶... |
 | Section: 官方表情 | N/A |
-| Section: 香奈美B站装扮表情 | N/A |
 | Section: 角色相关 | N/A |
-| Section: 相关音乐 | N/A |
 | Section: 相关剧情 | 玩玩闹闹沐春大聚餐 /*<pre>*/ .nav-chara { display: flex; flex-wrap: wrap; text-align: center; } .nav-chara... |
-| Section: 更新改动历史 | 2026年8月5日不停机更新 |
-| Section: 角色故事【幻与真的私人邀请】 | 当印有火烈鸟纹章的邀请函递呈到星庇所时，你多少感到有些意外：那位声名遐迩的魔术师女士仍然在普雷顿进行公开巡演她为何还有余裕向你递出这份私人邀请呢？ 应邀来到加拉蒂亚在普雷顿的临时住所，门扉后的房间与外... |
-| Section: 角色故事 | 加拉蒂亚：《知我所见》 /*<pre>*/ .nav-chara { display: flex; flex-wrap: wrap; text-align: center; } .nav-cha... |
+| Section: 更新改动历史 | 2026年8月18日不停机更新 |
+| Section: 香奈美B站装扮表情 | N/A |
+| Section: 相关音乐 | N/A |
 
 <details>
 <summary>View All Pages</summary>
 
+- [拉薇](https://wiki.biligame.com/klbq/%E6%8B%89%E8%96%87)
 - [香奈美](https://wiki.biligame.com/klbq/%E9%A6%99%E5%A5%88%E7%BE%8E)
 - [诺诺](https://wiki.biligame.com/klbq/%E8%AF%BA%E8%AF%BA)
 - [加拉蒂亚·利里](https://wiki.biligame.com/klbq/%E5%8A%A0%E6%8B%89%E8%92%82%E4%BA%9A%C2%B7%E5%88%A9%E9%87%8C)
-- [拉薇](https://wiki.biligame.com/klbq/%E6%8B%89%E8%96%87)
+- [绯莎](https://wiki.biligame.com/klbq/%E7%BB%AF%E8%8E%8E)
+- [明](https://wiki.biligame.com/klbq/%E6%98%8E)
+- [千代](https://wiki.biligame.com/klbq/%E5%8D%83%E4%BB%A3)
 - [汐](https://wiki.biligame.com/klbq/%E6%B1%90)
 - [芙拉薇娅](https://wiki.biligame.com/klbq/%E8%8A%99%E6%8B%89%E8%96%87%E5%A8%85)
 - [艾卡](https://wiki.biligame.com/klbq/%E8%89%BE%E5%8D%A1)
 - [白墨](https://wiki.biligame.com/klbq/%E7%99%BD%E5%A2%A8)
 - [玛拉](https://wiki.biligame.com/klbq/%E7%8E%9B%E6%8B%89)
-- [绯莎](https://wiki.biligame.com/klbq/%E7%BB%AF%E8%8E%8E)
-- [明](https://wiki.biligame.com/klbq/%E6%98%8E)
-- [千代](https://wiki.biligame.com/klbq/%E5%8D%83%E4%BB%A3)
+- [奥黛丽·格罗夫](https://wiki.biligame.com/klbq/%E5%A5%A5%E9%BB%9B%E4%B8%BD%C2%B7%E6%A0%BC%E7%BD%97%E5%A4%AB)
 - [米雪儿·李](https://wiki.biligame.com/klbq/%E7%B1%B3%E9%9B%AA%E5%84%BF%C2%B7%E6%9D%8E)
 - [信](https://wiki.biligame.com/klbq/%E4%BF%A1)
 - [蕾欧娜](https://wiki.biligame.com/klbq/%E8%95%BE%E6%AC%A7%E5%A8%9C)
-- [奥黛丽·格罗夫](https://wiki.biligame.com/klbq/%E5%A5%A5%E9%BB%9B%E4%B8%BD%C2%B7%E6%A0%BC%E7%BD%97%E5%A4%AB)
+- [梅瑞狄斯](https://wiki.biligame.com/klbq/%E6%A2%85%E7%91%9E%E7%8B%84%E6%96%AF)
 - [令](https://wiki.biligame.com/klbq/%E4%BB%A4)
 - [忧雾](https://wiki.biligame.com/klbq/%E5%BF%A7%E9%9B%BE)
 - [玛德蕾娜·利里](https://wiki.biligame.com/klbq/%E7%8E%9B%E5%BE%B7%E8%95%BE%E5%A8%9C%C2%B7%E5%88%A9%E9%87%8C)
 - [伊薇特](https://wiki.biligame.com/klbq/%E4%BC%8A%E8%96%87%E7%89%B9)
-- [梅瑞狄斯](https://wiki.biligame.com/klbq/%E6%A2%85%E7%91%9E%E7%8B%84%E6%96%AF)
 - [珐格兰丝](https://wiki.biligame.com/klbq/%E7%8F%90%E6%A0%BC%E5%85%B0%E4%B8%9D)
 - [心夏](https://wiki.biligame.com/klbq/%E5%BF%83%E5%A4%8F)
 - [星绘](https://wiki.biligame.com/klbq/%E6%98%9F%E7%BB%98)
@@ -74,9 +72,9 @@ This document outlines all available data sources discovered on the official Wik
 ### Available Fields (Detected from Samples)
 | Field Name | Example Value |
 |------------|---------------|
-| Section: 武器数据 | 名称 雨晦 使用者 诺诺 类型 微型冲锋枪 介绍 以提供个人防卫为理念而诞生的新时代冲锋枪，强大的火力倾泻能力和高昂的使用成本使得它有着“理想币泼水器”的美称。 辅助攻击 开... |
+| Section: 游戏数据 | 名称 雨晦 使用者 诺诺 类型 微型冲锋枪 介绍 以提供个人防卫为理念而诞生的新时代冲锋枪，强大的火力倾泻能力和高昂的使用成本使得它有着“理想币泼水器”的美称。 辅助攻击 开... |
 | Section: 武器伤害 | 射击目标为靶场人形靶 头部 上肢 下肢 10米 22 18 12 20米 20 16 11 30米 15 12 8 40米 15 12 8 50... |
-| Section: 武器手感数据 | 以下内容使用Deepseek分析游戏数据获得，仅供参考 |
+| Section: 武器详细数据 | 以下内容使用Deepseek分析游戏数据获得，仅供参考 |
 | Section: 武器外观 | 闪露芳霏浪人夏日派对禁区世界线跃动交错线青春迷彩破碎线条叛逆碎梦 |
 | Section: 武器准镜样式 | 武器瞄准镜样式由广大玩家提供，卡丘作战室负责整理，在此对提供玩家表示感谢！如需补充，请添加首页WIKI游戏交流群257624794提供截图。× |
 | Section: 超弦体移速表 | 未持有主武器时、持有副武器时、持有战术道具时 移动状态 疾跑移速 行走/腰射移速 开镜瞄准移速 前进状态 6米/秒 5.1米/秒 3米/秒 横向移动状态、后退状态 5.1米/... |
@@ -85,7 +83,7 @@ This document outlines all available data sources discovered on the official Wik
 | Section: 开发背景 | 单兵自卫武器（Personal Defence Weapon，简称PDW）的概念，最初是在1986年美国战备协会举办的年会上提出的，期后美国本宁堡步兵学校在《美国轻武器总规划》中正式提出开发PDW的设... |
 | Section: 结构特点 | P90外形相当怪异独特，初露面是让人感觉好像科幻片中的武器。全枪长约50cm，无托结构，重量轻，携行方便。P90采用模块式设计，可分为4个部分：枪机组件、整体式枪托、枪管及瞄具组件、弹匣。在全部的69... |
 | Section: 现状 | P90的开发完全是根据《美国轻武器总规划》中提出的设想而开发的，早在1987年年初，FN公司就开始与PDW武器的潜在客户联系，以试探PDW武器的市场前景，而1989年北约的AC225文件更增强了FN公... |
-| Section: 更新改动历史 | 2026年7月29日不停机更新 |
+| Section: 更新改动历史 | 2026年8月18日不停机更新 |
 | Section: 相关图片 | /* =========================== Freezeframe Wiki Wrapper 样式 =========================== */ /* ... |
 | Section: 基本规格 | 空枪重：原型2.18 kg，生产型目标1.8 - 2.0 kg 全长：406 / 635 mm 枪管长度：140 mm 使用弹药：.45ACP / .40 S&W 口径：.45 / .40 枪机种类：... |
 | Section: 简介 | 2005年底，美国转型国防工业公司（Transformational Defense Industries，简称TDI）公布了一种外形古怪的.45 ACP口径冲锋枪，名为“KRISS Super V”... |
