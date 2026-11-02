@@ -1,6 +1,6 @@
 # Wiki Data Integration Catalog
 
-> Automatically generated on 2026-10-26T09:53:26.860Z
+> Automatically generated on 2026-11-02T12:05:24.836Z
 
 This document outlines all available data sources discovered on the official Wiki. Select the data points you wish to integrate into the visualization dashboard.
 
@@ -10,13 +10,13 @@ This document outlines all available data sources discovered on the official Wik
 |----------|-------------|--------|
 | **Characters** | 0 | ❌ Not Found |
 | **Weapons** | 0 | ❌ Not Found |
-| **Maps** | 28 | ✅ Available |
+| **Maps** | 29 | ✅ Available |
 | **Game Modes** | 0 | ❌ Not Found |
 
 ---
 
 ## Maps Data Points
-**Total Entities**: 28
+**Total Entities**: 29
 
 ### Available Fields (Detected from Samples)
 | Field Name | Example Value |
@@ -56,6 +56,7 @@ This document outlines all available data sources discovered on the official Wik
 - [水下发电厂](https://wiki.biligame.com/klbq/%E6%B0%B4%E4%B8%8B%E5%8F%91%E7%94%B5%E5%8E%82)
 - [簌雪东区](https://wiki.biligame.com/klbq/%E7%B0%8C%E9%9B%AA%E4%B8%9C%E5%8C%BA)
 - [泰芙绿洲](https://wiki.biligame.com/klbq/%E6%B3%B0%E8%8A%99%E7%BB%BF%E6%B4%B2)
+- [维里昂裂隙](https://wiki.biligame.com/klbq/%E7%BB%B4%E9%87%8C%E6%98%82%E8%A3%82%E9%9A%99)
 - [猩红废墟](https://wiki.biligame.com/klbq/%E7%8C%A9%E7%BA%A2%E5%BA%9F%E5%A2%9F)
 - [虚空残岸](https://wiki.biligame.com/klbq/%E8%99%9A%E7%A9%BA%E6%AE%8B%E5%B2%B8)
 - [亚克萨工厂](https://wiki.biligame.com/klbq/%E4%BA%9A%E5%85%8B%E8%90%A8%E5%B7%A5%E5%8E%82)
