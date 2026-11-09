@@ -1,6 +1,6 @@
 # Wiki Data Integration Catalog
 
-> Automatically generated on 2026-11-02T12:05:24.836Z
+> Automatically generated on 2026-11-09T12:37:20.470Z
 
 This document outlines all available data sources discovered on the official Wiki. Select the data points you wish to integrate into the visualization dashboard.
 
